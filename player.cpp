@@ -2,11 +2,10 @@
 #include "DEFINITIONS.hpp"
 #include "player.hpp"
 #include "Games.hpp"
-#include "GameState.hpp"
+#include "Categories.hpp"
 #include <SFML/Window.hpp>
-
 #include <iostream>
-#include<string>
+#include <string>
 
 namespace Quizma
 {
@@ -47,7 +46,7 @@ namespace Quizma
 					this->_data->sound.play();
 					this->_name_file.close();
 					std::cout << "Load new state" << std::endl;
-					this->_data->machine.AddState(StateRef(new GameState(_data)), true);
+					this->_data->machine.AddState(StateRef(new Categories(_data)), true);
 				}
 				else if (event.type == sf::Event::TextEntered)
 				{

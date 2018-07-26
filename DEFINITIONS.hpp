@@ -43,4 +43,13 @@
 
 #define QUESTION_FILEPATH "questions.txt"
 #define ANSWERS_FILEPATH "answers.txt"
+
+#define QUESTION2_FILEPATH "questions2.txt"
+#define ANSWERS2_FILEPATH "answers2.txt"
+
 #define PLAYER_RECORD_FILEPATH "player.txt"
+
+#define CATEGORY_1 "Resources/MATHS.png"
+#define CATEGORY_2 "Resources/SPORTS.png"
+
+#define CATEGORY_SCREEN_FILEPATH "Resources/frame6.png"

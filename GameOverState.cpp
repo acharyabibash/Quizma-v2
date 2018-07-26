@@ -22,21 +22,23 @@ namespace Quizma
 		this->_data->assets.LoadTexture("Game Over", GAME_OVER_IMAGE);
 		this->_data->assets.LoadTexture("Quit Image", QUIT_FILEPATH);
 		this->_data->assets.LoadTexture("Cursor", CURSOR_FILEPATH);
+		this->_data->assets.LoadTexture("Play Again", PLAY_AGAIN_BUTTON_FILEPATH);
 
 
 		_background.setTexture(this->_data->assets.GetTexture("Game Over Background"));
-		_gameOver.setPosition((SCREEN_WIDTH / 2) - (_gameOver.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_gameOver.getGlobalBounds().height / 2));
 
-		_nextPage.setTexture(this->_data->assets.GetTexture("Next Page Image"));
+		_gameOver.setPosition(200, 200);
+
+		_playAgain.setTexture(this->_data->assets.GetTexture("Play Again"));
 		_gameOver.setTexture(this->_data->assets.GetTexture("Game Over"));
-		_Quit.setTexture(this->_data->assets.GetTexture("Quit Image"));
+		_quit.setTexture(this->_data->assets.GetTexture("Quit Image"));
 		_cursor.setTexture(this->_data->assets.GetTexture("Cursor"));
 
 		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_cursor.getGlobalBounds().height / 2));
 		_cursor.setScale(0.35, 0.35);
 
-		_nextPage.setPosition(1500, 950);
-		_Quit.setPosition(1700, 950);
+		_playAgain.setPosition(1300, 950);
+		_quit.setPosition(1700, 950);
 
 	}
 
@@ -52,7 +54,7 @@ namespace Quizma
 			}
 
 			// For moving to the main menu
-			if (this->_data->input.IsSpriteClicked(this->_nextPage, sf::Mouse::Left, this->_data->window))
+			if (this->_data->input.IsSpriteClicked(this->_playAgain, sf::Mouse::Left, this->_data->window))
 			{
 				// Go to the next page/question
 				this->_data->sound.setBuffer(this->_data->buffer);
@@ -61,7 +63,7 @@ namespace Quizma
 			}
 
 			//for exiting 
-			if (this->_data->input.IsSpriteClicked(this->_Quit, sf::Mouse::Left, this->_data->window))
+			if (this->_data->input.IsSpriteClicked(this->_quit, sf::Mouse::Left, this->_data->window))
 			{
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
@@ -89,8 +91,8 @@ namespace Quizma
 		this->_data->window.clear(sf::Color::Black);
 		this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_gameOver);
-		this->_data->window.draw(this->_nextPage);
-		this->_data->window.draw(this->_Quit);
+		this->_data->window.draw(this->_playAgain);
+		this->_data->window.draw(this->_quit);
 		this->_data->window.draw(this->_cursor);
 		this->_data->window.display();
 	}
