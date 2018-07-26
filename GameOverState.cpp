@@ -37,8 +37,8 @@ namespace Quizma
 		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_cursor.getGlobalBounds().height / 2));
 		_cursor.setScale(0.35, 0.35);
 
-		_playAgain.setPosition(1300, 950);
-		_quit.setPosition(1700, 950);
+		_playAgain.setPosition(1000, 600);
+		_quit.setPosition(1200, 600);
 
 	}
 

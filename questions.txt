@@ -1,5 +1,4 @@
 If you are given y=sqrt(tanx+sqrt(tanx+sqrt(tanx+sqrt(tanx...))) then find y'.:secx/(2y-1):sec^2x/(2y-1):secx/(1-2y):sec^2x/(1-2y):sec^2x/(2y-1)
-
 What does this mean "I will clean my room when pigs fly.":always:sometimes:sporadically:never:never
 How many rectangles can be formed from a figure having 5 parallel horizontal lines and 5 parallel vertical lines?:100:16:50:24:100
 When a man standing between two parallel hills fires a gun and hears the first echo and second echo after time 2s and 4s  then the distance between the hills is:1050m:990m:875m:1300m:990m
