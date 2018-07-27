@@ -21,9 +21,11 @@ namespace Quizma
 		GameDataRef _data;
 
 		sf::Sprite _background;
-		sf::Sprite _sound;
+		sf::Sprite _music;
 		sf::Sprite _music1;
 		sf::Sprite _music2;
+		sf::Sprite _music3;
+
 		sf::Sprite _option_1;
 		sf::Sprite _option_2;
 		sf::Sprite _option_back;

@@ -47,7 +47,7 @@ namespace Quizma
 		if (this->_clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME)
 		{
 			// Switch To Main Menu
-			//this->_data->music.play();
+			this->_data->music1.play();
 			this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
 		}
 	}

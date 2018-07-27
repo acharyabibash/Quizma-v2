@@ -1,4 +1,5 @@
 If you are given y=sqrt(tanx+sqrt(tanx+sqrt(tanx+sqrt(tanx...))) then find y'.:secx/(2y-1):sec^2x/(2y-1):secx/(1-2y):sec^2x/(1-2y):sec^2x/(2y-1)
+
 What does this mean "I will clean my room when pigs fly.":always:sometimes:sporadically:never:never
 How many rectangles can be formed from a figure having 5 parallel horizontal lines and 5 parallel vertical lines?:100:16:50:24:100
 When a man standing between two parallel hills fires a gun and hears the first echo and second echo after time 2s and 4s  then the distance between the hills is:1050m:990m:875m:1300m:990m
@@ -9,13 +10,3 @@ We often see people performing on the stage,if there are 7 girls dancing in circ
 There are various ores of iron from which it can be extracted.One of them is haematite.What is molecular formula of this ore?:Fe3o4:Fe3o3:Fe2o3:Fe4o3:Fe2o3
 CDs,DVDs are often used to distribute games.What if DVD-ROM disks are used to distribute video game software?:Disk cost increases:Can be reused after finishing game:Prevents cheating & makes game hard:Cannot hold games & videos:Prevents cheating & makes game hard
 A rugby ball is kicked such that it spins throughtout its entire flight, and reaches a maximum height.Is it possible for the ball to bounce higher than maximum height?:Yes:No:Maybe:Not enough information:Yes
-The distance between two parallel planes given by 3x-y+2z-6=0 and 6x-2y+4z+4=0 is:3:5:2.14:1.25:2.14
-0.5g of pure sodium carbonate is completely dissolved in 100ml of decinormal hydrochloric acid, the resulting mixture is:neutral:acidic:basic:amphoteric:acidic
-If we consider there are three axis, then the z coordinate of any point in the xy planes is:1:-1:2:0:0
-Copper can be extracted from its ore,which of the following is the ore of copper:malachite:haematite:carnalite:cinnabar:malachite
-The first moon landing marked the beginning of an exciting .........in space exploration:age:event:era:step:step
-There are many junction diode, among them P-N junction diode is equivalent to:Resistor:Capacitor:Inductor:Voltage source:Capacitor
-A proton and an alpha-particle of equal momenta enter a uniform magnetic field normally. The radii of their orbits will have the ratio:1/1:2/1:1/2:4/1:2/1
-Roots are the values obtained by sloving a equation, the equation whose roots are twice the roots of the equation 7x^2-5x+3=0 is:2x^2-5x+4=0:3x^2+4x-7=0:7x^2-8x+12=0:12x^2-7x+5=0:7x^2-8x+12=0
-The amount of water flowing into a tank doubles every minute. The tank is full in an hour. When is the tank half full?:52:30:59:47.5:59
-

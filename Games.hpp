@@ -37,12 +37,6 @@ namespace Quizma
 
 		std::vector<QuestionManager> question_vector;
 		QuestionVector qa_vector;
-
-		/*std::ifstream questionFile;
-		std::vector<std::string> question;
-		std::ifstream answerFile;
-		std::vector<std::string> answers;*/
-
 	};
 
 	typedef std::shared_ptr<GameData> GameDataRef;

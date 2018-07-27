@@ -16,22 +16,19 @@ namespace Quizma
 
 	void HighScore::Init()
 	{
-		this->_data->assets.LoadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
-		this->_data->assets.LoadTexture("Play Again", PLAY_AGAIN_BUTTON_FILEPATH);
-		this->_data->assets.LoadTexture("Quit Image", QUIT_FILEPATH);
+		this->_data->window.setMouseCursorVisible(false);
 
-		_background.setTexture(this->_data->assets.GetTexture("Game Over Background"));
-		_playAgain.setTexture(this->_data->assets.GetTexture("Play Again"));
-		_Quit.setTexture(this->_data->assets.GetTexture("Quit Image"));
+		this->_data->assets.LoadTexture("High Score Background", HIGH_SCORE_FILEPATH);
+		this->_data->assets.LoadTexture("Back", BACK_BUTTON_FILEPATH);
+		this->_data->assets.LoadTexture("Cursor", CURSOR_FILEPATH);
+
+		_background.setTexture(this->_data->assets.GetTexture("High Score Background"));
+		_backButton.setTexture(this->_data->assets.GetTexture("Back"));
+		_cursor.setTexture(this->_data->assets.GetTexture("Cursor"));
 	
-		_playAgain.setPosition(1300, 950);
-		_Quit.setPosition(1700, 950);
-
-
-		_optionsBox1.setColor(sf::Color::Black);
-		_optionsBox2.setColor(sf::Color::Black);
-		_optionsBox3.setColor(sf::Color::Black);
-		_optionsBox4.setColor(sf::Color::Black);
+		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_cursor.getGlobalBounds().height / 2));
+		_backButton.setPosition(1300, 950);
+		_cursor.setScale(0.35, 0.35);
 	}
 
 	void HighScore::HandleInput()
@@ -45,22 +42,15 @@ namespace Quizma
 				this->_data->window.close();
 			}
 			
-			if (this->_data->input.IsSpriteClicked(this->_playAgain, sf::Mouse::Left, this->_data->window))
+			if (this->_data->input.IsSpriteClicked(this->_backButton, sf::Mouse::Left, this->_data->window))
 			{
 
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
 				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-			}
 
-			if (this->_data->input.IsSpriteClicked(this->_Quit, sf::Mouse::Left, this->_data->window))
-			{
-				this->_data->sound.setBuffer(this->_data->buffer);
-				this->_data->sound.play();
-				this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-			}
-
-		
+				_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));
+			}		
 		}
 	}
 
@@ -74,9 +64,8 @@ namespace Quizma
 		this->_data->window.clear(sf::Color::Black);
 
 		this->_data->window.draw(this->_background);
-		this->_data->window.draw(this->_playAgain);
-		this->_data->window.draw(this->_Quit);
-
+		this->_data->window.draw(this->_backButton);
+		this->_data->window.draw(this->_cursor);
 		this->_data->window.display();
 	}
 

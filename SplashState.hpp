@@ -22,7 +22,6 @@ namespace Quizma
 
 		sf::Clock _clock;
 		sf::Sprite _cursor;
-		//sf::View fixed = this->_data->window.getView();
 		sf::Sprite _background;
 	};
 }

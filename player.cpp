@@ -45,6 +45,7 @@ namespace Quizma
 					this->_data->sound.setBuffer(this->_data->buffer);
 					this->_data->sound.play();
 					this->_name_file.close();
+
 					std::cout << "Load new state" << std::endl;
 					this->_data->machine.AddState(StateRef(new Categories(_data)), true);
 				}

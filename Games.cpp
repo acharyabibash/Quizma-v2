@@ -9,10 +9,10 @@ namespace Quizma
 	{
 		_data->window.create(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar | sf::Style::Fullscreen);
 		_data->machine.AddState(StateRef(new SplashState(this->_data)));
-		_data->music.openFromFile("Resources/glasgowkiss.wav");
-		_data->music1.openFromFile("Resources/buu.wav");
+		//_data->music.openFromFile("Resources/glasgowkiss.wav");
+		_data->music1.openFromFile("Resources/song1.wav");
 		_data->music2.openFromFile("Resources/L Theme.wav");
-		_data->music3.openFromFile("Resources/vegeta.wav");
+		_data->music3.openFromFile("Resources/song2.wav");
 		_data->buffer.loadFromFile("Resources/Choose.wav");
 
 		_data->font.loadFromFile("Resources/CENTAUR.ttf");
@@ -23,32 +23,9 @@ namespace Quizma
 
 		_data->question_vector = _data->qa_vector.passQuestion();
 
-		/*for (decltype(_data->question_vector.size()) i = 0; i < _data->question_vector.size(); i++) {
-			std::cout << _data->question_vector.at(i) << std::endl;
-		}*/
-		/*std::ifstream questionFile(QUESTION_FILEPATH);
-		if (questionFile.is_open()) {
-			while (!questionFile.eof())
-			{
-				std::string questionTemp;
-				std::getline(questionFile, questionTemp);
-				this->_data->question.push_back(questionTemp);
-			}
-		}
-		std::ifstream answerFile(ANSWERS_FILEPATH);
-		if (answerFile.is_open()) {
-			while (!answerFile.eof())
-			{
-				std::string answerTemp;
-				std::getline(answerFile, answerTemp);
-				this->_data->answers.push_back(answerTemp);
-			}
-		}
-*/
-		
-
 		this->Run();
 	}
+
 
 	void Games::Run()
 	{

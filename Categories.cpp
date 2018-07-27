@@ -61,6 +61,8 @@ namespace Quizma
 				//this->_data->music.pause();
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
+
+				std::cout << "Category 1 is chosen" <<std::endl;
 				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution
@@ -73,6 +75,8 @@ namespace Quizma
 				//Switch to the sports section
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
+
+				std::cout << "Category 2 is chosen" << std::endl;
 				this->_data->machine.AddState(StateRef(new GameState2(_data)), true);
 
 				// For random questions per execution

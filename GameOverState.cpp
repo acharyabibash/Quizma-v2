@@ -6,6 +6,7 @@
 #include "MainMenuState.hpp"
 #include "GameState.hpp"
 #include "Games.hpp"
+#include "Categories.hpp"
 
 #include <iostream>
 
@@ -37,8 +38,8 @@ namespace Quizma
 		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_cursor.getGlobalBounds().height / 2));
 		_cursor.setScale(0.35, 0.35);
 
-		_playAgain.setPosition(1000, 600);
-		_quit.setPosition(1200, 600);
+		_playAgain.setPosition(1300, 950);
+		_quit.setPosition(1700, 950);
 
 	}
 
@@ -59,7 +60,7 @@ namespace Quizma
 				// Go to the next page/question
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				this->_data->machine.AddState(StateRef(new Categories(_data)), true);
 			}
 
 			//for exiting 
@@ -71,6 +72,7 @@ namespace Quizma
 				//this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 				_data->window.close();
 			}
+
 
 			_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));
 

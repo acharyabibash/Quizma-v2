@@ -17,13 +17,13 @@ namespace Quizma
 	{
 		//for (std::size_t i = 0; i < this->_data->question_vector.size(); i++)
 		//{
-			for (std::size_t j = 0; j < SIZE_OF_ANS; j++)
+		for (std::size_t j = 0; j < SIZE_OF_ANS; j++)
+		{
+			if (this->_data->question_vector.at(question_no).ans[j] == this->_data->question_vector.at(question_no).correct_ans)
 			{
-				if (this->_data->question_vector.at(question_no).ans[j] == this->_data->question_vector.at(question_no).correct_ans)
-				{
-					return j;
-				}
+				return j;
 			}
+		}
 		//}
 	}
 
@@ -83,10 +83,9 @@ namespace Quizma
 		_optionsBox[1].setPosition(1250, 400);
 		_optionsBox[2].setPosition(150, 600);
 		_optionsBox[3].setPosition(1250, 600);
-		//_nextPage.setPosition(1200, 600);
-		//_Quit.setPosition(1700, 950);
 
 		_background.setColor(sf::Color::White);
+
 		for (std::size_t i = 0; i < SIZE_OF_ANS; i++)
 		{
 			_optionsBox[i].setColor(sf::Color::White);
@@ -155,7 +154,7 @@ namespace Quizma
 							_optionsBox[i].setColor(sf::Color::Cyan);
 
 							question_no++;
-							std::cout << "Score: " << question_no << std::endl;
+							std::cout << "Score: " << question_no * 10 << std::endl;
 							//go to next question
 							this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 						}
@@ -164,7 +163,7 @@ namespace Quizma
 							std::cout << "Correct subscript is: " << getCorrectAnswer() << std::endl;
 							_optionsBox[i].setColor(sf::Color::Red);
 							_optionsBox[getCorrectAnswer()].setColor(sf::Color::Cyan);
-							std::cout << "Score: " << question_no << std::endl;
+							std::cout << "Score: " << question_no * 10 << std::endl;
 							question_no = 0;
 
 							this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
@@ -245,10 +244,7 @@ namespace Quizma
 		}
 	}
 
-	void GameState::Update(float dt)
-	{
 
-	}
 
 	void GameState::Draw(float dt)
 	{
@@ -264,9 +260,26 @@ namespace Quizma
 			this->_data->window.draw(this->_data->texts[i]);
 		}
 
-		//this->_data->window.draw(this->_nextPage);
-		//this->_data->window.draw(this->_Quit);
 		this->_data->window.draw(this->_cursor);
 		this->_data->window.display();
+	}
+
+
+	void GameState::Update(float dt)
+	{/*
+		while ( this->_clock.getElapsedTime().asSeconds() <= 5)
+		{
+			static int a = 30;
+			ss << a;
+				std::cout << ss.str() << std::endl;
+				numbers.setString(ss.str());
+				this->_data->window.draw(numbers);
+				std::cout << this->_clock.getElapsedTime().asSeconds() << std::endl;
+
+		}*/
+		if (this->_clock.getElapsedTime().asSeconds() > 5)
+		{
+			this->_data->machine.AddState(StateRef(new GameState(_data)), true);
+		}
 	}
 }

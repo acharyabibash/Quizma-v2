@@ -17,8 +17,6 @@ namespace Quizma
 		void HandleInput();
 		void Update(float dt);
 		void Draw(float dt);
-		
-
 
 	private:
 		GameDataRef _data;
@@ -29,9 +27,6 @@ namespace Quizma
 		sf::Sprite _exitButton;		
 		sf::Sprite _optionsButton;
 		sf::Sprite _cursor;
-		sf::Sprite _bulb;
-
-		//sf::View _fixed;
-	
+		sf::Sprite _highScore;	
 	};
 }
