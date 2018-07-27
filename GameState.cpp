@@ -8,6 +8,8 @@
 #include "HighScore.hpp"
 #include "GameOverState.hpp"
 #include <iostream>
+#include <chrono>
+#include <thread>
 
 namespace Quizma
 {
@@ -57,7 +59,6 @@ namespace Quizma
 		this->_data->assets.LoadTexture("Option Box 2 Image", OPTION_BOX);
 		this->_data->assets.LoadTexture("Option Box 3 Image", OPTION_BOX);
 		this->_data->assets.LoadTexture("Option Box 4 Image", OPTION_BOX);
-		this->_data->assets.LoadTexture("Quit Image", QUIT_FILEPATH);
 		this->_data->assets.LoadTexture("Cursor", CURSOR_FILEPATH);
 
 		_background.setTexture(this->_data->assets.GetTexture("Game Background"));
@@ -165,6 +166,14 @@ namespace Quizma
 							_optionsBox[getCorrectAnswer()].setColor(sf::Color::Cyan);
 							std::cout << "Score: " << question_no * 10 << std::endl;
 							question_no = 0;
+
+							for (int i = 0; i < SIZE_OF_TEXTS; i++)
+							{
+								this->_data->window.draw(this->_optionsBox[i]);
+							}
+
+							this->_data->window.display();
+							std::this_thread::sleep_for(std::chrono::seconds(2));
 
 							this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 						}

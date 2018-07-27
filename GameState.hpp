@@ -25,8 +25,6 @@ namespace Quizma
 		sf::Sprite _questionBox;
 		sf::Sprite _optionsBox[4];
 
-		sf::Sprite _nextPage;
-		sf::Sprite _Quit;
 		sf::Sprite _cursor;
 		sf::Clock _clock;
 		std::stringstream ss;
