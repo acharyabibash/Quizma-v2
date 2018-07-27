@@ -1,2 +1,5 @@
-Who is the best player in the world?:C.Ronaldo:Messi:Gauraba:Dalle
-What is the only person to have won both world cup and champions league?:a:b:c:d
+Where did Usain Bolt finish in his final race of his career?:First:Second:Third:He didn't finish:He didn't finish
+Which tennis player made it to three singles grand slam finals this year?:Venus Williams:Roger Federer:Rafa Nadal:Garbiñe Muguruza:Rafa Nadal
+Who scored the first goal of the fifa world cup 2018?:Denis Cheryshev:Aleksandr Golovin:Yuri Gazinsky:Christiano Ronaldo:Yuri Gazinsky
+Who was the first player to be sent off?:Carlos Sanchez:Igor Smolnikov:Cheikhou Kouyate:Neymar:Carlos Sanchez
+Who assisted Lionel Messi for his only goal of the group stages?:Angel Di Maria:Ever Banega:Enzo Perez:None of the above:Ever Banega
