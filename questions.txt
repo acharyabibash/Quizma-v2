@@ -17,4 +17,5 @@ The first moon landing marked the beginning of an exciting .........in space exp
 There are many junction diode, among them P-N junction diode is equivalent to:Resistor:Capacitor:Inductor:Voltage source:Capacitor
 A proton and an alpha-particle of equal momenta enter a uniform magnetic field normally. The radii of their orbits will have the ratio:1/1:2/1:1/2:4/1:2/1
 Roots are the values obtained by sloving a equation, the equation whose roots are twice the roots of the equation 7x^2-5x+3=0 is:2x^2-5x+4=0:3x^2+4x-7=0:7x^2-8x+12=0:12x^2-7x+5=0:7x^2-8x+12=0
+The amount of water flowing into a tank doubles every minute. The tank is full in an hour. When is the tank half full?:52:30:59:47.5:59
 
