@@ -66,8 +66,8 @@ namespace Quizma
 				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution
-				this->_data->qa_vector.shuffleQuestions();
-				this->_data->question_vector = this->_data->qa_vector.passQuestion();
+				this->_data->qa_vector.shuffleMathQuestions();
+				this->_data->question_vector = this->_data->qa_vector.passMathQuestions();
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_sports, sf::Mouse::Left, this->_data->window))
@@ -80,8 +80,8 @@ namespace Quizma
 				this->_data->machine.AddState(StateRef(new GameState2(_data)), true);
 
 				// For random questions per execution
-				this->_data->qa_vector.shuffleQuestions();
-				this->_data->question_vector = this->_data->qa_vector.passQuestion();
+				this->_data->qa_vector.shuffleSportsQuestions();
+				this->_data->question_vector = this->_data->qa_vector.passSportsQuestions();
 			}
 
 			_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));

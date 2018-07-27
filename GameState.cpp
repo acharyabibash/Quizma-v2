@@ -17,8 +17,6 @@ namespace Quizma
 
 	std::size_t GameState::getCorrectAnswer()
 	{
-		//for (std::size_t i = 0; i < this->_data->question_vector.size(); i++)
-		//{
 		for (std::size_t j = 0; j < SIZE_OF_ANS; j++)
 		{
 			if (this->_data->question_vector.at(question_no).ans[j] == this->_data->question_vector.at(question_no).correct_ans)
@@ -26,8 +24,8 @@ namespace Quizma
 				return j;
 			}
 		}
-		//}
 	}
+
 
 	GameState::GameState(GameDataRef data) : _data(data)
 	{
@@ -92,11 +90,8 @@ namespace Quizma
 			_optionsBox[i].setColor(sf::Color::White);
 		}
 
-		//static decltype(this->_data->question_vector.size()) question_no = 0;
 		for (; question_no < this->_data->question_vector.size(); )
 		{
-			//if (question_no < this->_data->question_vector.size())
-			//{
 			this->_data->text.setString(this->_data->question_vector.at(question_no).quest);
 
 			this->_data->texts[0].setString(this->_data->question_vector.at(question_no).ans[0]);
@@ -115,7 +110,6 @@ namespace Quizma
 			std::cout << this->_data->question_vector.at(question_no).ans[4] << std::endl;
 
 			break;
-			//}
 
 		}
 	}
@@ -123,7 +117,6 @@ namespace Quizma
 	void GameState::HandleInput()
 	{
 		sf::Event event;
-		//static decltype(this->_data->question_vector.at(0).ans->size()) question_no = 0;
 
 		while (this->_data->window.pollEvent(event))
 		{
@@ -132,7 +125,7 @@ namespace Quizma
 				this->_data->window.close();
 			}
 
-			//for option 1 is clicked
+			//for options are clicked
 			if (question_no < this->_data->question_vector.size()) {
 				for (std::size_t i = 0; i < SIZE_OF_ANS; i++)
 				{
@@ -161,84 +154,23 @@ namespace Quizma
 							{
 								this->_data->window.draw(this->_optionsBox[i]);
 							}
-
+							this->_data->window.draw(this->_cursor);
 							this->_data->window.display();
-							std::this_thread::sleep_for(std::chrono::seconds(2));
+							
+							std::this_thread::sleep_for(std::chrono::milliseconds(2500));
 
 							this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 						}
 					}
 				}
 
-
-				//	//for option 2 is clicked
-				//	if (this->_data->input.IsSpriteClicked(this->_optionsBox2, sf::Mouse::Left, this->_data->window))
-				//	{
-				//		if (this->_data->question_vector.at(question_no).ans[1] == this->_data->question_vector.at(question_no).correct_ans) {
-				//			this->_data->sound.setBuffer(this->_data->buffer);
-				//			this->_data->sound.play();
-				//			_optionsBox2.setColor(sf::Color::Cyan);
-
-				//			question_no++;
-				//			std::cout << "Score: " << question_no << std::endl;
-				//			//go to next question
-				//			this->_data->machine.AddState(StateRef(new GameState(_data)), true);
-				//		} else {
-				//			_optionsBox2.setColor(sf::Color::Red);
-				//			std::cout << "Score: " << question_no << std::endl;
-				//			question_no = 0;
-				//			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-				//		}
-				//	}
-
-				//	//for option 3 is clicked
-				//	if (this->_data->input.IsSpriteClicked(this->_optionsBox3, sf::Mouse::Left, this->_data->window))
-				//	{
-				//		if (this->_data->question_vector.at(question_no).ans[2] == this->_data->question_vector.at(question_no).correct_ans) {
-				//			this->_data->sound.setBuffer(this->_data->buffer);
-				//			this->_data->sound.play();
-				//			_optionsBox3.setColor(sf::Color::Cyan);
-
-				//			question_no++;
-				//			std::cout << "Score: " << question_no << std::endl;
-				//			//go to next question
-				//			this->_data->machine.AddState(StateRef(new GameState(_data)), true);
-				//		} else {
-				//			_optionsBox3.setColor(sf::Color::Red);
-				//			std::cout << "Score: " << question_no << std::endl;
-				//			question_no = 0;
-				//			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-				//		}
-				//	}
-
-				//	//for option 4 is clicked
-				//	if (this->_data->input.IsSpriteClicked(this->_optionsBox4, sf::Mouse::Left, this->_data->window))
-				//	{
-				//		if (this->_data->question_vector.at(question_no).ans[3] == this->_data->question_vector.at(question_no).correct_ans) {
-				//			this->_data->sound.setBuffer(this->_data->buffer);
-				//			this->_data->sound.play();
-				//			_optionsBox4.setColor(sf::Color::Cyan);
-
-				//			question_no++;
-				//			std::cout << "Score: " << question_no << std::endl;
-				//			//go to next question
-				//			this->_data->machine.AddState(StateRef(new GameState(_data)), true);
-				//		} else {
-				//			_optionsBox4.setColor(sf::Color::Red);
-				//			std::cout << "Score: " << question_no << std::endl;
-				//			question_no = 0;
-				//			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-				//		}
-				//	}
-				//} else {
-				//	std::cout << "Score: " << question_no << std::endl;
-				//	question_no = 0;
-				//	this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-				//}
-
 				//for exiting 
 
 				_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));
+			}
+			else
+			{
+				this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 			}
 		}
 	}

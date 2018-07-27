@@ -2,8 +2,9 @@
 
 namespace Quizma
 {
-	QuestionManager::QuestionManager(std::string question, std::string answer[])
+	QuestionManager::QuestionManager(std::string category, std::string question, std::string answer[])
 	{
+		this->category = category;
 		quest = question;
 
 		decltype(this->ans->size()) i = 0;
@@ -13,13 +14,16 @@ namespace Quizma
 		correct_ans = answer[i];
 	}
 
-	void QuestionManager::setValue(std::string question, std::string answer[])
+	void QuestionManager::setValue(std::string category, std::string question, std::string answer[])
 	{
+		this->category = category;
 		quest = question;
 
-		for (decltype(this->ans->size()) i = 0; i < SIZE_OF_ANS; i++) {
+		decltype(this->ans->size()) i = 0;
+		for (; i < SIZE_OF_ANS; i++) {
 			this->ans[i] = answer[i];
 		}
+		correct_ans = answer[i];
 	}
 
 	std::ostream &operator<<(std::ostream &output, const QuestionManager &q)

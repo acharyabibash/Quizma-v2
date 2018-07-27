@@ -6,7 +6,8 @@ namespace Quizma
 	{
 		rng.seed(this->seed);
 		question_answer_vector = q1.loadQuestion();
-		std::shuffle(question_answer_vector.begin(), question_answer_vector.end(), rng);
+		//std::shuffle(sports_question_vector.begin(), sports_question_vector.end(), rng);
+		//std::shuffle(math_question_vector.begin(), math_question_vector.end(), rng);
 	}
 
 	void QuestionVector::displayQuestions()
@@ -16,13 +17,40 @@ namespace Quizma
 		}
 	}
 
-	void QuestionVector::shuffleQuestions()
+	void QuestionVector::shuffleSportsQuestions()
 	{
-		std::shuffle(question_answer_vector.begin(), question_answer_vector.end(), rng);
+		std::shuffle(sports_question_vector.begin(), sports_question_vector.end(), rng);
 	}
 
-	std::vector<QuestionManager> QuestionVector::passQuestion()
+	void QuestionVector::shuffleMathQuestions()
 	{
-		return question_answer_vector;
+		std::shuffle(math_question_vector.begin(), math_question_vector.end(), rng);
+	}
+
+	void QuestionVector::armQuestions()
+	{
+		for (decltype(question_answer_vector.size()) i = 0; i < question_answer_vector.size(); i++)
+		{
+			if (question_answer_vector.at(i).category == "Sports")
+			{
+				sports_question_vector.push_back(question_answer_vector.at(i));
+			}
+			else if (question_answer_vector.at(i).category == "Math")
+			{
+				math_question_vector.push_back(question_answer_vector.at(i));
+			}
+		}
+	}
+
+	std::vector<QuestionManager> QuestionVector::passSportsQuestions()
+	{
+		armQuestions();
+		return sports_question_vector;
+	}
+
+	std::vector<QuestionManager> QuestionVector::passMathQuestions()
+	{
+		armQuestions();
+		return math_question_vector;
 	}
 }

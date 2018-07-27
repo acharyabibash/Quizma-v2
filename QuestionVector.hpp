@@ -12,13 +12,18 @@ namespace Quizma
 	private:
 		QuestionUtils q1;
 		std::vector<QuestionManager> question_answer_vector;
+		std::vector<QuestionManager> sports_question_vector;
+		std::vector<QuestionManager> math_question_vector;
 		unsigned int seed = std::chrono::system_clock::now().time_since_epoch().count();
 		std::default_random_engine rng;/*(seed);*/
 
 	public:
 		QuestionVector();
 		void displayQuestions();
-		void shuffleQuestions();
-		std::vector<QuestionManager> passQuestion();
+		void shuffleSportsQuestions();
+		void shuffleMathQuestions();
+		void armQuestions();
+		std::vector<QuestionManager> passSportsQuestions();
+		std::vector<QuestionManager> passMathQuestions();
 	};
 }
