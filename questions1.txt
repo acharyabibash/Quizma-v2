@@ -9,6 +9,7 @@ When were the Commonwealth Games organized for the first time?:1934:1930:1948:19
 What is the maximum permitted length of a cricket bat?:32":34":36":38":38"
 In which sports is the participants called puligist?:Wrestling:Boxing:Javelin throw:Sprinter:Boxing
 Which of the following International Tennis Tournaments is held on a grass court?:US open:French Open:Wimbledon:Australian Open:Wimbledon
+Which cricketer holds the record for scoring the highest number of runs in a test match innings?:Sachin Tendulkar:Vivian Richards:Sunil Gavaskar:Brian Lara:Brian Lara
 
 
 
