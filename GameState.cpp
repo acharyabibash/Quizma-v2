@@ -132,16 +132,6 @@ namespace Quizma
 				this->_data->window.close();
 			}
 
-
-			if (this->_data->input.IsSpriteClicked(this->_nextPage, sf::Mouse::Left, this->_data->window))
-			{
-				// Go to the next page/question
-				this->_data->sound.setBuffer(this->_data->buffer);
-				this->_data->sound.play();
-				this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
-			}
-
-
 			//for option 1 is clicked
 			if (question_no < this->_data->question_vector.size()) {
 				for (std::size_t i = 0; i < SIZE_OF_ANS; i++)
