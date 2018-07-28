@@ -5,6 +5,7 @@
 #include "GameOverState.hpp"
 #include "MainMenuState.hpp"
 #include "GameState.hpp"
+#include "GameState2.hpp"
 #include "Games.hpp"
 #include "Categories.hpp"
 

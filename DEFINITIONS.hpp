@@ -3,11 +3,10 @@
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
 
-#define SPLASH_STATE_SHOW_TIME 1
+#define SPLASH_STATE_SHOW_TIME 2.5
 #define SPLASH_SCENE_BACKGROUND_FILEPATH "Resources/logo.png"
 
 #define MAIN_MENU_BACKGROUND_FILEPATH "Resources/frame15.jpg"
-
 
 #define CURSOR_FILEPATH "Resources/Cursor3.png"
 
@@ -57,7 +56,7 @@
 
 #define CATEGORY_SCREEN_FILEPATH "Resources/frame14.jpg"
 #define HIGH_SCORE_BUTTON "Resources/HIGH SCORE.png"
-#define HIGH_SCORE_FILEPATH "Resources/frame11.jpg"
+#define HIGH_SCORE_FILEPATH "Resources/frame14.jpg"
 
 #define SOUND_ICON_FILEPATH "Resources/soundicon.png"
 #define PAUSE_ICON_FILEPATH "Resources/pauseicon.png"

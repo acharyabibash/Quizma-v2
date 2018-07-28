@@ -7,10 +7,10 @@
 
 namespace Quizma
 {
-	class GameState : public State
+	class GameState3 : public State
 	{
 	public:
-		GameState(GameDataRef data);
+		GameState3(GameDataRef data);
 
 		void Init();
 		void HandleInput();
@@ -27,13 +27,16 @@ namespace Quizma
 		bool is_wrong_sprite_clicked = false;
 
 		sf::Sprite _cursor;
+		sf::Clock _clock;
+		std::stringstream ss;
+		sf::Text _numbers;
 		sf::Sprite _sound_icon;
 		sf::Sprite _pause_icon;
 		sf::Sprite _quit_icon;
-		sf::Clock _clock_prime;
+		sf::Clock _clock_prime3;
 
 		//for timer countdown
-		sf::Clock _clock;
+		sf::Clock _clock3;
 		int _countdown = 30;
 		std::string _countdownString;
 		std::ostringstream _convert;
