@@ -4,6 +4,7 @@
 #include "Games.hpp"
 #include "GameState.hpp"
 #include <SFML/Window.hpp>
+#include "Categories.hpp"
 
 #include <iostream>
 #include<string>
@@ -25,12 +26,13 @@ namespace Quizma
 
 		_name_file.open(PLAYER_RECORD_FILEPATH,std::ios::app);
 
-		this->_data->font.loadFromFile("Resources/CHILLER.ttf");
-		this->_data->text.setFont(this->_data->font);
-		this->_data->text.setCharacterSize(50);
-		this->_data->text.setFillColor(sf::Color::White);
-		this->_data->text.setPosition(850, 525);
-		this->_data->text.scale(2.0f , 1.0f);
+		_name_font.loadFromFile(PLAYER_FONT_FILEPATH);
+		_name_text.setFont(_name_font);
+		_name_text.setCharacterSize(50);
+		_name_text.setFillColor(sf::Color::Black);
+		_name_text.setPosition(1005, 665);
+		_name_text.setOrigin(_name_text.getLocalBounds().width / 2, _name_text.getLocalBounds().height / 2);
+		_name_text.scale(1.0f , 1.0f);
 
 	}
 
@@ -53,7 +55,7 @@ namespace Quizma
 					this->_data->sound.play();
 					this->_name_file.close();
 					std::cout << "Load new state" << std::endl;
-					this->_data->machine.AddState(StateRef(new GameState(_data)), true);
+					this->_data->machine.AddState(StateRef(new Categories(_data)), true);
 				}
 				else if (event.type == sf::Event::TextEntered)
 				{
@@ -66,7 +68,8 @@ namespace Quizma
 						_name = _name.substr(0, _name.length() - 1);
 					
 					}
-					this->_data->text.setString(_name);
+					_name_text.setString(_name);
+					_name_text.setOrigin(_name_text.getLocalBounds().width / 2, _name_text.getLocalBounds().height / 2);
 				}
 				
 			}
@@ -85,7 +88,7 @@ namespace Quizma
 		this->_data->window.clear(sf::Color::Black);
 		this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_border);
-		this->_data->window.draw(this->_data->text);
+		this->_data->window.draw(_name_text);
 		this->_data->window.display();
 	}
 
