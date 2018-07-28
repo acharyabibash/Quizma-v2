@@ -24,7 +24,7 @@ namespace Quizma
 		std::ofstream _name_file;
 		std::string _name;
 		std::vector<std::string> _name_vector;
-		sf::Text _display_name;
+	
 	};
 }
 
