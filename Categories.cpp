@@ -57,13 +57,14 @@ namespace Quizma
 			if (this->_data->input.IsSpriteClicked(this->_maths_and_logic, sf::Mouse::Left, this->_data->window))
 			{
 				// Switch to the maths and logic section
+				//this->_data->music.pause();
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
+
 				std::cout << "Category 1 is chosen" <<std::endl;
 				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution
-				this->_data->qa_vector.shuffleMathQuestions();
 				this->_data->question_vector = this->_data->qa_vector.passMathQuestions();
 			}
 
@@ -72,11 +73,11 @@ namespace Quizma
 				//Switch to the sports section
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
+
 				std::cout << "Category 2 is chosen" << std::endl;
 				this->_data->machine.AddState(StateRef(new GameState2(_data)), true);
 
 				// For random questions per execution
-				this->_data->qa_vector.shuffleSportsQuestions();
 				this->_data->question_vector = this->_data->qa_vector.passSportsQuestions();
 			}
 

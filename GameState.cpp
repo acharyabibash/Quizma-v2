@@ -113,18 +113,9 @@ namespace Quizma
 			this->_data->texts[2].setString(this->_data->question_vector.at(question_no).ans[2]);
 			this->_data->texts[3].setString(this->_data->question_vector.at(question_no).ans[3]);
 
-			std::cout << this->_data->question_vector.at(question_no).quest << std::endl;
-			std::cout << this->_data->question_vector.at(question_no).ans[0] << std::endl;
-			std::cout << this->_data->question_vector.at(question_no).ans[1] << std::endl;
-			std::cout << this->_data->question_vector.at(question_no).ans[2] << std::endl;
-			std::cout << this->_data->question_vector.at(question_no).ans[3] << std::endl;
-
-			//question_no++;
-			std::cout << "Question number = " << question_no << std::endl;
-			std::cout << this->_data->question_vector.at(question_no).ans[4] << std::endl;
+			std::cout << this->_data->question_vector.at(question_no).correct_ans << std::endl;
 
 			break;
-
 		}
 	}
 
@@ -158,23 +149,13 @@ namespace Quizma
 						}
 						else
 						{
+							is_wrong_sprite_clicked = true;
+
 							std::cout << "Correct subscript is: " << getCorrectAnswer() << std::endl;
 							_optionsBox[i].setColor(sf::Color::Red);
-							_optionsBox[getCorrectAnswer()].setColor(sf::Color::Green);
+							_optionsBox[getCorrectAnswer()].setColor(sf::Color::Cyan);
 							std::cout << "Score: " << question_no * 10 << std::endl;
 							question_no = 0;
-
-							for (int i = 0; i < SIZE_OF_TEXTS; i++)
-							{
-								this->_data->window.draw(this->_optionsBox[i]);
-							}
-							this->_data->window.draw(this->_cursor);
-							this->_data->window.display();
-
-							std::this_thread::sleep_for(std::chrono::milliseconds(2500));
-							std::cout << "Oops! Tha's an incorrect answer!" << std::endl;
-
-							this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 						}
 					}
 				}
@@ -212,27 +193,33 @@ namespace Quizma
 
 	void GameState::Update(float dt)
 	{
-
+		if (this->_clock.getElapsedTime().asSeconds() > 30)
+		{
+			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+		}
 	}
 	
 	void GameState::Draw(float dt)
+	{
+		void GameState::Draw(float dt)
 	{
 		this->_data->window.clear();
 
 		this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_questionBox);
 		this->_data->window.draw(this->_data->text);
-		this->_data->window.draw(this->_sound_icon);
-		this->_data->window.draw(this->_pause_icon);
-		this->_data->window.draw(this->_quit_icon);
-
 		for (int i = 0; i < SIZE_OF_TEXTS; i++)
 		{
 			this->_data->window.draw(this->_optionsBox[i]);
 			this->_data->window.draw(this->_data->texts[i]);
 		}
-
 		this->_data->window.draw(this->_cursor);
+
 		this->_data->window.display();
+
+		if (is_wrong_sprite_clicked)
+		{
+			std::this_thread::sleep_for(std::chrono::milliseconds(2500));
+			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+		}
 	}
-}

@@ -24,6 +24,7 @@ namespace Quizma
 		sf::Sprite _background;
 		sf::Sprite _questionBox;
 		sf::Sprite _optionsBox[4];
+		bool is_wrong_sprite_clicked = false;
 
 		sf::Sprite _cursor;
 		sf::Clock _clock;

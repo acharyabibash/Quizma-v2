@@ -21,7 +21,7 @@ namespace Quizma
 			_data->texts[i].setFont(this->_data->font);
 		}
 
-		//_data->question_vector = _data->qa_vector.passQuestion();
+		_data->qa_vector.armQuestions();
 
 		this->Run();
 	}
