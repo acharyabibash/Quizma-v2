@@ -9,3 +9,8 @@ Math:We often see people performing on the stage,if there are 7 girls dancing in
 Math:There are various ores of iron from which it can be extracted.One of them is haematite.What is molecular formula of this ore?:Fe3o4:Fe3o3:Fe2o3:Fe4o3:Fe2o3
 Math:CDs,DVDs are often used to distribute games.What if DVD-ROM disks are used to distribute video game software?:Disk cost increases:Can be reused after finishing game:Prevents cheating & makes game hard:Cannot hold games & videos:Prevents cheating & makes game hard
 Math:A rugby ball is kicked such that it spins throughtout its entire flight, and reaches a maximum height.Is it possible for the ball to bounce higher than maximum height?:Yes:No:Maybe:Not enough information:Yes
+Sports:Where did Usain Bolt finish in his final race of his career?:First:Second:Third:He didn't finish:He didn't finish
+Sports:Which tennis player made it to three singles grand slam finals this year?:Venus Williams:Roger Federer:Rafa Nadal:Garbiñe Muguruza:Rafa Nadal
+Sports:Who scored the first goal of the fifa world cup 2018?:Denis Cheryshev:Aleksandr Golovin:Yuri Gazinsky:Christiano Ronaldo:Yuri Gazinsky
+Sports:Who was the first player to be sent off?:Carlos Sanchez:Igor Smolnikov:Cheikhou Kouyate:Neymar:Carlos Sanchez
+Sports:Who assisted Lionel Messi for his only goal of the group stages?:Angel Di Maria:Ever Banega:Enzo Perez:None of the above:Ever Banega
