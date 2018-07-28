@@ -34,8 +34,31 @@ Sports:Who was the first player to be sent off in the World Cup 2018?:Carlos San
 Sports:Who assisted Lionel Messi for his only goal of the group stages?:Angel Di Maria:Ever Banega:Enzo Perez:None of the above:Ever Banega
 English:He could go for a long drive today if it.......sunny.:was:is:were:had been:were
 English:I was told......very quickly and quietly.:go:to go:going:to going:to go
-English:He postponed..........to lumbini.:going:to going:gone:to go:going
+English:He postponed..........to lumbini.:going:to going:gone:to go:going 
+English:The offer was too good for me to turn it........:off:down:away:over:down 
 English:I, accompanied by my friends,.......going to the party.:am:is:are:have:am
 English:The synonym of 'alienate' is:estrange:calm:reconcile:depreciate:estrange
-English:The opposite meaning of the word 'fiasco' is:failure:debacle:limp:achievement:achievement
 English:The antonym of 'carnal' is:stormy:miscrable:hasty:spiritual:spiritual
+English:The opposite meaning of the word 'fiasco' is:failure:debacle:limp:achievement:achievement
+English:A man of unsual habits is:genius:bigot:fanatic:eccentric:eccentric
+English:The servant always complies........the wishes of his master:to:with:for:in:with
+English:'To break the ice' refers to:to end the hostility:to end up partnership:to start quarelling:to start a conversation:to start a conversation
+English:She..............the work by tomorrow.:will finish:is finishing:finished:will have finished:will have finished
+English:Listen! I..........to explain this to you.:try:tried:have tried:am trying:am trying
+English:'A hard nut to crack' means:very stubborn:difficult child:walnut or fruit:problem hard to solve:difficult child
+English:'Continuous' is for 'continuity'...............for 'creation'.:create:creative:creatively:none:creative
+English:She talks as if she...........everything,but she doesn't.:know:knew:had known:had been knowing:knew
+English:We are looking forward to..........our parents next month.:see:saw:been seen:seeing:seeing
+English:The disease has.............throughout the city.:broken out:broken down:broken up:broken off:broken out
+English:He decided to 'put his foot down' means:not to yield:resign:withdraw:none:not to yield
+English:She...........the table for dinner.:lies:lay:lain:lying:lay
+English:There was a discussion between.........:me and her:them and us:you and her:me and them:you and her
+English:Those of.........who were chosen were asked to fill in.......nomination forms:we,our:us,ours:them,theirs:you,your:you,your
+English:The professor and lawyer.........responsible for the plan.:is:are:have been:were:is
+English:He was cautioned...........driving fast.:against:by:at:for:against
+English:The tendancy of postponing things:procrastinate:prolong:anticipate:delay:procrastinate
+English:The meeting was..........till next friday.:put by:put off:put in:pull through:put off
+English:'To cast the first stone' means:deeply involved:first to find fault:praise all:start a fight
+English:The man..........from his chair suddenly.:raised:rose:rise:raise:rose
+English:She did make-up and it........her face:shone:shined:shine:none:shone
+English:The collection of flags is:orology:bunting:numismatics:philatelist:bunting
