@@ -191,12 +191,6 @@ namespace Quizma
 
 	void GameState::Update(float dt)
 	{
-		static int i = 0;
-		i++;
-		if (this->_clock.getElapsedTime().asSeconds() == 1)
-		{
-			std::cout << "FUCK U BITCH" << std::endl;
-		}
 		if (this->_clock.getElapsedTime().asSeconds() > 30)
 		{
 			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);

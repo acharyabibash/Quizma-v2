@@ -8,6 +8,7 @@
 
 #define MAIN_MENU_BACKGROUND_FILEPATH "Resources/frame15.jpg"
 
+
 #define CURSOR_FILEPATH "Resources/Cursor3.png"
 
 #define PLAY_BUTTON_FILEPATH "Resources/NEW GAME.png"
@@ -27,7 +28,7 @@
 #define NEXT_PAGE_FILEPATH "Resources/NEXT.png"
 #define QUIT_FILEPATH "Resources/QUIT.png"
 
-#define PLAYER_BACKGROUND_FILEPATH "Resources/frame10.jpg"
+#define PLAYER_BACKGROUND_FILEPATH "Resources/frame9.jpg"
 #define PLAYER_FONT_FILEPATH "Resources/nameFont.ttf"
 
 #define GAME_OVER_BACKGROUND_FILEPATH "Resources/frame14.jpg"
@@ -56,7 +57,7 @@
 
 #define CATEGORY_SCREEN_FILEPATH "Resources/frame14.jpg"
 #define HIGH_SCORE_BUTTON "Resources/HIGH SCORE.png"
-#define HIGH_SCORE_FILEPATH "Resources/frame14.jpg"
+#define HIGH_SCORE_FILEPATH "Resources/frame11.jpg"
 
 #define SOUND_ICON_FILEPATH "Resources/soundicon.png"
 #define PAUSE_ICON_FILEPATH "Resources/pauseicon.png"
