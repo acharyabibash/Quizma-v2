@@ -28,7 +28,7 @@
 #define NEXT_PAGE_FILEPATH "Resources/NEXT.png"
 #define QUIT_FILEPATH "Resources/QUIT.png"
 
-#define PLAYER_BACKGROUND_FILEPATH "Resources/frame9.jpg"
+#define PLAYER_BACKGROUND_FILEPATH "Resources/frame10.jpg"
 #define PLAYER_FONT_FILEPATH "Resources/nameFont.ttf"
 
 #define GAME_OVER_BACKGROUND_FILEPATH "Resources/frame14.jpg"
