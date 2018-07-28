@@ -12,5 +12,18 @@ Math:A rugby ball is kicked such that it spins throughtout its entire flight, an
 Sports:Where did Usain Bolt finish in his final race of his career?:First:Second:Third:He didn't finish:He didn't finish
 Sports:Which tennis player made it to three singles grand slam finals this year?:Venus Williams:Roger Federer:Rafa Nadal:Garbiñe Muguruza:Rafa Nadal
 Sports:Who scored the first goal of the fifa world cup 2018?:Denis Cheryshev:Aleksandr Golovin:Yuri Gazinsky:Christiano Ronaldo:Yuri Gazinsky
-Sports:Who was the first player to be sent off?:Carlos Sanchez:Igor Smolnikov:Cheikhou Kouyate:Neymar:Carlos Sanchez
+Sports:Who was the first player to be sent off in the World Cup 2018?:Carlos Sanchez:Igor Smolnikov:Cheikhou Kouyate:Neymar:Carlos Sanchez
 Sports:Who assisted Lionel Messi for his only goal of the group stages?:Angel Di Maria:Ever Banega:Enzo Perez:None of the above:Ever Banega
+Math:The process of heating ore in absence of air in the process of metallurgy is:Calcination:Roasting:Smelting:Quenching:Calcination
+Math:The type of the wave formed in an open organ pipe from both ends is:Transverse Stationary:Longitudinal Stationary:Both:None:Longitudinal Stationary
+Math:A fan is switched on in a room.The temperature of the room:Increases:Decreases:Remains Same:Cannot be predicted:Increases
+Math:The instrument that measures and records the relative humidity of the air is:Hygrometer:Hydrometer:Lactometer:Barometer:Hygrometer
+Math:If the length of a simple pendulum is halved then its period of oscillation is:Doubled:halved:Increased by a factor:Decreased by a factor:Decreased by a factor
+Math:The distance between two parallel planes given by 3x-y+2z-6=0 and 6x-2y+4z+4=0 is:3:5:2.14:1.25:2.14
+Math:0.5g of pure sodium carbonate is completely dissolved in 100ml of decinormal hydrochloric acid, the resulting mixture is:neutral:acidic:basic:amphoteric:acidic
+Math:If we consider there are three axis, then the z coordinate of any point in the xy planes is:1:-1:2:0:0
+Math:Copper can be extracted from its ore,which of the following is the ore of copper:malachite:haematite:carnalite:cinnabar:malachite
+Math:The first moon landing marked the beginning of an exciting .........in space exploration:age:event:era:step:step
+Math:There are many junction diode, among them P-N junction diode is equivalent to:Resistor:Capacitor:Inductor:Voltage source:Capacitor
+Math:A proton and an alpha-particle of equal momenta enter a uniform magnetic field normally. The radii of their orbits will have the ratio:1/1:2/1:1/2:4/1:2/1
+Math:Roots are the values obtained by sloving a equation, the equation whose roots are twice the roots of the equation 7x^2-5x+3=0 is:2x^2-5x+4=0:3x^2+4x-7=0:7x^2-8x+12=0:12x^2-7x+5=0:7x^2-8x+12=0
