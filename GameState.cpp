@@ -37,7 +37,7 @@ namespace Quizma
 		// set the character size
 		this->_data->text.setCharacterSize(30);
 		this->_data->text.setFillColor(sf::Color::Black);
-		this->_data->text.setPosition(250,200);
+		this->_data->text.setPosition(250, 200);
 
 		for (int i = 0; i < SIZE_OF_TEXTS; i++)
 		{
@@ -73,7 +73,7 @@ namespace Quizma
 		_quit_icon.setTexture(this->_data->assets.GetTexture("Quit Icon"));
 		_cursor.setTexture(this->_data->assets.GetTexture("Cursor"));
 
-		_questionBox.setScale(1.85,0.5);
+		_questionBox.setScale(1.85, 0.5);
 
 		for (std::size_t i = 0; i < SIZE_OF_ANS; i++)
 		{
@@ -98,7 +98,7 @@ namespace Quizma
 		_sound_icon.setColor(sf::Color::Yellow);
 		_pause_icon.setColor(sf::Color::Yellow);
 		_quit_icon.setColor(sf::Color::Red);
-			
+
 		for (std::size_t i = 0; i < SIZE_OF_ANS; i++)
 		{
 			_optionsBox[i].setColor(sf::Color::White);
@@ -198,10 +198,8 @@ namespace Quizma
 			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 		}
 	}
-	
+
 	void GameState::Draw(float dt)
-	{
-		void GameState::Draw(float dt)
 	{
 		this->_data->window.clear();
 
@@ -223,3 +221,4 @@ namespace Quizma
 			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 		}
 	}
+}

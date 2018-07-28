@@ -20,8 +20,6 @@ namespace Quizma
 	public:
 		QuestionVector();
 		void displayQuestions();
-		void shuffleSportsQuestions();
-		void shuffleMathQuestions();
 		void armQuestions();
 		std::vector<QuestionManager> passSportsQuestions();
 		std::vector<QuestionManager> passMathQuestions();

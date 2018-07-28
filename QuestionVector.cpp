@@ -17,16 +17,6 @@ namespace Quizma
 		}
 	}
 
-	void QuestionVector::shuffleSportsQuestions()
-	{
-		std::shuffle(sports_question_vector.begin(), sports_question_vector.end(), rng);
-	}
-
-	void QuestionVector::shuffleMathQuestions()
-	{
-		std::shuffle(math_question_vector.begin(), math_question_vector.end(), rng);
-	}
-
 	void QuestionVector::armQuestions()
 	{
 		for (decltype(question_answer_vector.size()) i = 0; i < question_answer_vector.size(); i++)
@@ -44,13 +34,13 @@ namespace Quizma
 
 	std::vector<QuestionManager> QuestionVector::passSportsQuestions()
 	{
-		armQuestions();
+		std::shuffle(sports_question_vector.begin(), sports_question_vector.end(), rng);
 		return sports_question_vector;
 	}
 
 	std::vector<QuestionManager> QuestionVector::passMathQuestions()
 	{
-		armQuestions();
+		std::shuffle(math_question_vector.begin(), math_question_vector.end(), rng);
 		return math_question_vector;
 	}
 }

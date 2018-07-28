@@ -7,10 +7,10 @@
 
 namespace Quizma
 {
-	class GameState : public State
+	class GameState2 : public State
 	{
 	public:
-		GameState(GameDataRef data);
+		GameState2(GameDataRef data);
 
 		void Init();
 		void HandleInput();
