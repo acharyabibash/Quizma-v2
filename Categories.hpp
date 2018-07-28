@@ -16,7 +16,7 @@ namespace Quizma
 		void HandleInput();
 		void Update(float dt);
 		void Draw(float dt);
-		
+
 
 	private:
 		GameDataRef _data;

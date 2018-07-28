@@ -4,6 +4,7 @@
 #include "DEFINITIONS.hpp"
 #include "Categories.hpp"
 #include "GameState.hpp"
+#include "GameState2.hpp"
 #include <iostream>
 
 namespace Quizma
@@ -20,7 +21,7 @@ namespace Quizma
 		this->_data->window.setMouseCursorVisible(false);
 		this->_data->assets.LoadTexture("Cursor", CURSOR_FILEPATH);
 		this->_data->assets.LoadTexture("Background", CATEGORY_SCREEN_FILEPATH);
-		this->_data->assets.LoadTexture("Maths and Logics",CATEGORY_1);
+		this->_data->assets.LoadTexture("Maths and Logics", CATEGORY_1);
 		this->_data->assets.LoadTexture("Sports", CATEGORY_2);
 		this->_data->assets.LoadTexture("English", CATEGORY_3);
 
@@ -63,7 +64,7 @@ namespace Quizma
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
 
-				std::cout << "Category 1 is chosen" <<std::endl;
+				std::cout << "Category 1 is chosen" << std::endl;
 				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution

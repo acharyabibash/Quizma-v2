@@ -61,27 +61,34 @@ namespace Quizma
 			if (this->_data->input.IsSpriteClicked(this->_playAgain, sf::Mouse::Left, this->_data->window))
 			{
 				// Go to the next page/question
+
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
 				this->_data->machine.AddState(StateRef(new Categories(_data)), true);
 			}
-			
-			//for returning to the main screen title
-			if (this->_data->input.IsSpriteClicked(this->_returnToTitle, sf::Mouse::Left, this->_data->window))
+			if ((this->_data->input.IsSpriteClicked(this->_returnToTitle, sf::Mouse::Left, this->_data->window)) || (this->_data->input.IsSpriteClicked(this->_quit, sf::Mouse::Left, this->_data->window)) )
 			{
-				_name_file << this->_data->score << std::endl;
-				this->_data->sound.setBuffer(this->_data->buffer);
-				this->_data->sound.play();
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-			}
+				_name_file << this->_data->score << ":";
+				if (this->_data->category == 0)
+					_name_file << "Math" << std::endl;
+				if (this->_data->category == 1)
+					_name_file << "Sport" << std::endl;
 
-			//for exiting 
-			if (this->_data->input.IsSpriteClicked(this->_quit, sf::Mouse::Left, this->_data->window))
-			{
-				_name_file << this->_data->score << std::endl;
-				this->_data->sound.setBuffer(this->_data->buffer);
-				this->_data->sound.play();
-				_data->window.close();
+				//for returning to the main screen title
+				if (this->_data->input.IsSpriteClicked(this->_returnToTitle, sf::Mouse::Left, this->_data->window))
+				{
+					this->_data->sound.setBuffer(this->_data->buffer);
+					this->_data->sound.play();
+					this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				}
+
+				//for exiting 
+				if (this->_data->input.IsSpriteClicked(this->_quit, sf::Mouse::Left, this->_data->window))
+				{
+					this->_data->sound.setBuffer(this->_data->buffer);
+					this->_data->sound.play();
+					_data->window.close();
+				}
 			}
 		
 			_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));

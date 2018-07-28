@@ -25,6 +25,8 @@ namespace Quizma
 		QuestionManager questions;
 
 		int score;
+		int category;
+
 		sf::Music music;
 		sf::Music music1;
 		sf::Music music2;
