@@ -19,6 +19,9 @@ namespace Quizma
 
 	void GameOverState::Init()
 	{
+		_name_file.open(PLAYER_RECORD_FILEPATH, std::ios::app);
+		
+
 		this->_data->assets.LoadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
 		this->_data->assets.LoadTexture("Game Over", GAME_OVER_IMAGE);
 		this->_data->assets.LoadTexture("Quit Image", QUIT_FILEPATH);
@@ -66,6 +69,7 @@ namespace Quizma
 			//for returning to the main screen title
 			if (this->_data->input.IsSpriteClicked(this->_returnToTitle, sf::Mouse::Left, this->_data->window))
 			{
+				_name_file << this->_data->score << std::endl;
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
 				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
@@ -74,6 +78,7 @@ namespace Quizma
 			//for exiting 
 			if (this->_data->input.IsSpriteClicked(this->_quit, sf::Mouse::Left, this->_data->window))
 			{
+				_name_file << this->_data->score << std::endl;
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
 				_data->window.close();

@@ -20,7 +20,7 @@ namespace Quizma
 
 	private:
 		GameDataRef _data;
-
+		std::ofstream _name_file;
 		sf::Clock _clock;
 		sf::Sprite _background;
 		sf::Sprite _gameOver;

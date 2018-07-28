@@ -24,7 +24,7 @@ namespace Quizma
 		InputManager input;
 		QuestionManager questions;
 
-
+		int score;
 		sf::Music music;
 		sf::Music music1;
 		sf::Music music2;

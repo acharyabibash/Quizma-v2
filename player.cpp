@@ -50,7 +50,7 @@ namespace Quizma
 			{
 				if (event.key.code == sf::Keyboard::Return)
 				{
-					_name_file << _name << std::endl;
+					_name_file << _name << ":";
 					this->_data->sound.setBuffer(this->_data->buffer);
 					this->_data->sound.play();
 					this->_name_file.close();

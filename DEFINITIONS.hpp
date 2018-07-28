@@ -48,7 +48,7 @@
 #define QUESTION2_FILEPATH "questions2.txt"
 #define ANSWERS2_FILEPATH "answers2.txt"
 
-#define PLAYER_RECORD_FILEPATH "player.txt"
+#define PLAYER_RECORD_FILEPATH "player1.txt"
 
 #define CATEGORY_1 "Resources/MATHS.png"
 #define CATEGORY_2 "Resources/SPORTS.png"
