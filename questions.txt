@@ -34,10 +34,9 @@ Sports:Who scored the first goal of the fifa world cup 2018?:Denis Cheryshev:Ale
 Sports:Who was the first player to be sent off in the World Cup 2018?:Carlos Sanchez:Igor Smolnikov:Cheikhou Kouyate:Neymar:Carlos Sanchez
 Sports:Who assisted Lionel Messi for his only goal of the group stages?:Angel Di Maria:Ever Banega:Enzo Perez:None of the above:Ever Banega
 English:He could go for a long drive today if it.......sunny.:was:is:were:had been:were
-English:I was told......very quickly and quietly.:go:to go:going:to going
+English:I was told......very quickly and quietly.:go:to go:going:to going:to go
 English:He postponed..........to lumbini.:going:to going:gone:to go:going
 English:I, accompanied by my friends,.......going to the party.:am:is:are:have:am
 English:The synonym of 'alienate' is:estrange:calm:reconcile:depreciate:estrange
-English:The antonym of 'carnal' is:stormy:miscrable:hasty:spiritual:spiritual
 English:The opposite meaning of the word 'fiasco' is:failure:debacle:limp:achievement:achievement
-
+English:The antonym of 'carnal' is:stormy:miscrable:hasty:spiritual:spiritual

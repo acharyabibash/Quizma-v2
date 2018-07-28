@@ -4,7 +4,6 @@
 #include "DEFINITIONS.hpp"
 #include "Categories.hpp"
 #include "GameState.hpp"
-#include "GameState2.hpp"
 #include <iostream>
 
 namespace Quizma

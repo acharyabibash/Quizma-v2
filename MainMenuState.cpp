@@ -5,7 +5,7 @@
 #include "MainMenuState.hpp"
 #include "Options.hpp"
 #include "player.hpp"
-#include "Categories2.hpp"
+#include "Categories.hpp"
 #include <iostream>
 
 namespace Quizma
@@ -81,7 +81,7 @@ namespace Quizma
 				//Optimize the program
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
-				this->_data->machine.AddState(StateRef(new Categories2(_data)), true);
+				this->_data->machine.AddState(StateRef(new Categories(_data)), true);
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_exitButton, sf::Mouse::Left, this->_data->window))
