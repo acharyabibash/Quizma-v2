@@ -89,15 +89,12 @@ namespace Quizma
 		_optionsBox[1].setPosition(1090, 450);
 		_optionsBox[2].setPosition(290, 650);
 		_optionsBox[3].setPosition(1090, 650);
-		_sound_icon.setPosition(1600, 0);
-		_pause_icon.setPosition(1700, 0);
-		_quit_icon.setPosition(1800, 0);
+		_sound_icon.setPosition(0, 200);
+		_pause_icon.setPosition(0, 100);
+		_quit_icon.setPosition(0, 0);
 
 		_quit_icon.setColor(sf::Color::Black);
 		_background.setColor(sf::Color::White);
-		_sound_icon.setColor(sf::Color::Yellow);
-		_pause_icon.setColor(sf::Color::Yellow);
-		_quit_icon.setColor(sf::Color::Red);
 
 		for (std::size_t i = 0; i < SIZE_OF_ANS; i++)
 		{
@@ -211,6 +208,11 @@ namespace Quizma
 			this->_data->window.draw(this->_optionsBox[i]);
 			this->_data->window.draw(this->_data->texts[i]);
 		}
+
+		this->_data->window.draw(this->_sound_icon);
+		this->_data->window.draw(this->_pause_icon);
+		this->_data->window.draw(this->_quit_icon);
+
 		this->_data->window.draw(this->_cursor);
 
 		this->_data->window.display();

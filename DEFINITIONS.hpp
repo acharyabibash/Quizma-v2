@@ -48,17 +48,22 @@
 #define QUESTION2_FILEPATH "questions2.txt"
 #define ANSWERS2_FILEPATH "answers2.txt"
 
-#define PLAYER_RECORD_FILEPATH "player1.txt"
+#define PLAYER_RECORD_FILEPATH "player.txt"
 
-#define CATEGORY_1 "Resources/MATHS.png"
+#define CATEGORY_1 "Resources/SCIENCE.png"
 #define CATEGORY_2 "Resources/SPORTS.png"
+#define CATEGORY_3 "Resources/ENGLISH.png"
 
 #define CATEGORY_SCREEN_FILEPATH "Resources/frame14.jpg"
 #define HIGH_SCORE_BUTTON "Resources/HIGH SCORE.png"
 #define HIGH_SCORE_FILEPATH "Resources/frame14.jpg"
 
-
 #define SOUND_ICON_FILEPATH "Resources/soundicon.png"
 #define PAUSE_ICON_FILEPATH "Resources/pauseicon.png"
 #define QUIT_ICON_FILEPATH "Resources/quiticon.png"
 #define RETURN_TO_TITLE_FILEPATH "Resources/RETURN TO TITLE.png"
+
+#define INSTRUCTION_SCREEN_FILEPATH "Resources/instructions.png"
+#define NEXT_BUTTON_FILEPATH "Resources/NEXT.png"
+
+#define NAME_FILEPATH "Resources/NAME.png"
