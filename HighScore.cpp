@@ -25,10 +25,10 @@ namespace Quizma
 		_background.setTexture(this->_data->assets.GetTexture("High Score Background"));
 		_backButton.setTexture(this->_data->assets.GetTexture("Back"));
 		_cursor.setTexture(this->_data->assets.GetTexture("Cursor"));
-	
+		_cursor.setScale(0.35, 0.35);
+
 		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_cursor.getGlobalBounds().height / 2));
 		_backButton.setPosition(1300, 950);
-		_cursor.setScale(0.35, 0.35);
 	}
 
 	void HighScore::HandleInput()
@@ -44,12 +44,9 @@ namespace Quizma
 			
 			if (this->_data->input.IsSpriteClicked(this->_backButton, sf::Mouse::Left, this->_data->window))
 			{
-
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
-				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
-
-				_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));
+				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);				
 			}		
 		}
 	}
@@ -66,6 +63,7 @@ namespace Quizma
 		this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_backButton);
 		this->_data->window.draw(this->_cursor);
+
 		this->_data->window.display();
 	}
 

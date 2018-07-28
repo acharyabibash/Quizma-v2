@@ -57,31 +57,44 @@ namespace Quizma
 		this->_data->assets.LoadTexture("Option Box 2 Image", OPTION_BOX);
 		this->_data->assets.LoadTexture("Option Box 3 Image", OPTION_BOX);
 		this->_data->assets.LoadTexture("Option Box 4 Image", OPTION_BOX);
+		this->_data->assets.LoadTexture("Sound Icon", SOUND_ICON_FILEPATH);
+		this->_data->assets.LoadTexture("Pause Icon", PAUSE_ICON_FILEPATH);
+		this->_data->assets.LoadTexture("Quit Icon", QUIT_ICON_FILEPATH);
 		this->_data->assets.LoadTexture("Cursor", CURSOR_FILEPATH);
 
 		_background.setTexture(this->_data->assets.GetTexture("Game Background"));
-		//_nextPage.setTexture(this->_data->assets.GetTexture("Next Page Image"));
-
 		_optionsBox[0].setTexture(this->_data->assets.GetTexture("Option Box 1 Image"));
 		_optionsBox[1].setTexture(this->_data->assets.GetTexture("Option Box 2 Image"));
 		_optionsBox[2].setTexture(this->_data->assets.GetTexture("Option Box 3 Image"));
 		_optionsBox[3].setTexture(this->_data->assets.GetTexture("Option Box 4 Image"));
 		_questionBox.setTexture(this->_data->assets.GetTexture("Question Box Image"));
-		//_Quit.setTexture(this->_data->assets.GetTexture("Quit Image"));
+		_sound_icon.setTexture(this->_data->assets.GetTexture("Sound Icon"));
+		_pause_icon.setTexture(this->_data->assets.GetTexture("Pause Icon"));
+		_quit_icon.setTexture(this->_data->assets.GetTexture("Quit Icon"));
+
 		_cursor.setTexture(this->_data->assets.GetTexture("Cursor"));
 
 		_questionBox.setScale(sf::Vector2f(0.20f, 0.15f));
+
 		for (std::size_t i = 0; i < SIZE_OF_ANS; i++)
 		{
 			_optionsBox[i].setScale(0.75, 0.75);
 		}
 		_cursor.setScale(0.35, 0.35);
+		_sound_icon.setScale(0.2, 0.2);
+		_pause_icon.setScale(0.2, 0.2);
+		_quit_icon.setScale(0.2, 0.2);
 
 		_questionBox.setPosition((SCREEN_WIDTH / 2) - (_questionBox.getGlobalBounds().width / 2), _questionBox.getGlobalBounds().height / 3);
 		_optionsBox[0].setPosition(150, 400);
 		_optionsBox[1].setPosition(1250, 400);
 		_optionsBox[2].setPosition(150, 600);
 		_optionsBox[3].setPosition(1250, 600);
+		_sound_icon.setPosition(1400, 0);
+		_pause_icon.setPosition(1500, 0);
+		_quit_icon.setPosition(1600, 0);
+
+		_quit_icon.setColor(sf::Color::Black);
 
 		_background.setColor(sf::Color::White);
 
@@ -156,12 +169,27 @@ namespace Quizma
 							}
 							this->_data->window.draw(this->_cursor);
 							this->_data->window.display();
-							
+
 							std::this_thread::sleep_for(std::chrono::milliseconds(2500));
 
 							this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 						}
 					}
+				}
+
+				if (this->_data->input.IsSpriteClicked(this->_sound_icon, sf::Mouse::Left, this->_data->window))
+				{
+					this->_data->music1.play();
+				}
+
+				if (this->_data->input.IsSpriteClicked(this->_pause_icon, sf::Mouse::Left, this->_data->window))
+				{
+					this->_data->music1.pause();
+				}
+
+				if (this->_data->input.IsSpriteClicked(this->_quit_icon, sf::Mouse::Left, this->_data->window))
+				{
+					this->_data->window.close();
 				}
 
 				//for exiting 
@@ -184,6 +212,9 @@ namespace Quizma
 		this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_questionBox);
 		this->_data->window.draw(this->_data->text);
+		this->_data->window.draw(this->_sound_icon);
+		this->_data->window.draw(this->_pause_icon);
+		this->_data->window.draw(this->_quit_icon);
 
 		for (int i = 0; i < SIZE_OF_TEXTS; i++)
 		{
@@ -198,16 +229,16 @@ namespace Quizma
 
 	void GameState2::Update(float dt)
 	{/*
-		while ( this->_clock.getElapsedTime().asSeconds() <= 5)
-		{
-			static int a = 30;
-			ss << a;
-				std::cout << ss.str() << std::endl;
-				numbers.setString(ss.str());
-				this->_data->window.draw(numbers);
-				std::cout << this->_clock.getElapsedTime().asSeconds() << std::endl;
+	 while ( this->_clock.getElapsedTime().asSeconds() <= 5)
+	 {
+	 static int a = 30;
+	 ss << a;
+	 std::cout << ss.str() << std::endl;
+	 numbers.setString(ss.str());
+	 this->_data->window.draw(numbers);
+	 std::cout << this->_clock.getElapsedTime().asSeconds() << std::endl;
 
-		}*/
+	 }*/
 		if (this->_clock.getElapsedTime().asSeconds() > 5)
 		{
 			this->_data->machine.AddState(StateRef(new GameState2(_data)), true);

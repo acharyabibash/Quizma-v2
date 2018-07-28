@@ -5,7 +5,7 @@
 #include "MainMenuState.hpp"
 #include "Options.hpp"
 #include "player.hpp"
-#include "HighScore.hpp"
+#include "HighScore2.hpp"
 #include <iostream>
 
 namespace Quizma
@@ -36,14 +36,17 @@ namespace Quizma
 		_cursor.setTexture(this->_data->assets.GetTexture("Cursor"));
 		_highScore.setTexture(this->_data->assets.GetTexture("High Score"));				
 
-		_title.setPosition((SCREEN_WIDTH / 2) - (_title.getGlobalBounds().width / 2), _title.getGlobalBounds().height / 7);
-		_playButton.setPosition((SCREEN_WIDTH / 2) - (_playButton.getGlobalBounds().width / 2), 250);
-		_optionsButton.setPosition((SCREEN_WIDTH / 2) - (_optionsButton.getGlobalBounds().width / 2), 350);
-		_highScore.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), 450);
-		_exitButton.setPosition((SCREEN_WIDTH / 2) - (_exitButton.getGlobalBounds().width / 2),500);
-		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), 650);
-
+		_title.setScale(1.5, 1.5);
+		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), 900);
 		_cursor.setScale(0.35, 0.35);
+
+		_title.setPosition((SCREEN_WIDTH / 2) - (_title.getGlobalBounds().width / 2), _title.getGlobalBounds().height / 7);
+		_playButton.setPosition((SCREEN_WIDTH / 2) - (_playButton.getGlobalBounds().width / 2), 350);
+		_optionsButton.setPosition((SCREEN_WIDTH / 2) - (_optionsButton.getGlobalBounds().width / 2), 500);
+		_highScore.setPosition((SCREEN_WIDTH / 2) - (_highScore.getGlobalBounds().width / 2), 650);
+		_exitButton.setPosition((SCREEN_WIDTH / 2) - (_exitButton.getGlobalBounds().width / 2), 800);
+
+
 	}
 
 	void MainMenuState::HandleInput()
@@ -86,7 +89,7 @@ namespace Quizma
 				//Optimize the program
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
-				this->_data->machine.AddState(StateRef(new HighScore(_data)), true);
+				this->_data->machine.AddState(StateRef(new HighScore2(_data)), true);
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_exitButton, sf::Mouse::Left, this->_data->window))

@@ -36,12 +36,12 @@ namespace Quizma
 		_option_back.setTexture(this->_data->assets.GetTexture("Option Back"));
 		_cursor.setTexture(this->_data->assets.GetTexture("Cursor"));
 
-		_music.setPosition(100, 150);
-		_music1.setPosition(100, 400);
-		_music2.setPosition(100,650);
-		_music3.setPosition(100, 900);
+		_music.setPosition(250, 200);
+		_music1.setPosition(250, 400);
+		_music2.setPosition(250,600);
+		_music3.setPosition(250, 800);
 
-		_option_2.setPosition(700,150);
+		_option_2.setPosition(700,200);
 		_option_back.setPosition(1700, 950);
 
 		_cursor.setScale(0.35, 0.35);

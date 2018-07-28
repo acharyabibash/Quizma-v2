@@ -24,21 +24,21 @@ namespace Quizma
 		this->_data->assets.LoadTexture("Quit Image", QUIT_FILEPATH);
 		this->_data->assets.LoadTexture("Cursor", CURSOR_FILEPATH);
 		this->_data->assets.LoadTexture("Play Again", PLAY_AGAIN_BUTTON_FILEPATH);
-
+		this->_data->assets.LoadTexture("Return To Title", RETURN_TO_TITLE_FILEPATH);
 
 		_background.setTexture(this->_data->assets.GetTexture("Game Over Background"));
-
-		_gameOver.setPosition(200, 200);
-
 		_playAgain.setTexture(this->_data->assets.GetTexture("Play Again"));
 		_gameOver.setTexture(this->_data->assets.GetTexture("Game Over"));
 		_quit.setTexture(this->_data->assets.GetTexture("Quit Image"));
+		_returnToTitle.setTexture(this->_data->assets.GetTexture("Return To Title"));
 		_cursor.setTexture(this->_data->assets.GetTexture("Cursor"));
 
-		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_cursor.getGlobalBounds().height / 2));
 		_cursor.setScale(0.35, 0.35);
-
-		_playAgain.setPosition(1300, 950);
+	
+		_gameOver.setPosition((SCREEN_WIDTH / 2) - (_gameOver.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_gameOver.getGlobalBounds().height / 2));
+		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_cursor.getGlobalBounds().height / 2));
+		_playAgain.setPosition(800, 950);
+		_returnToTitle.setPosition(1200, 950);
 		_quit.setPosition(1700, 950);
 
 	}
@@ -54,7 +54,7 @@ namespace Quizma
 				this->_data->window.close();
 			}
 
-			// For moving to the main menu
+			// For moving to the categories selection(for the same player)
 			if (this->_data->input.IsSpriteClicked(this->_playAgain, sf::Mouse::Left, this->_data->window))
 			{
 				// Go to the next page/question
@@ -62,18 +62,23 @@ namespace Quizma
 				this->_data->sound.play();
 				this->_data->machine.AddState(StateRef(new Categories(_data)), true);
 			}
+			
+			//for returning to the main screen title
+			if (this->_data->input.IsSpriteClicked(this->_returnToTitle, sf::Mouse::Left, this->_data->window))
+			{
+				this->_data->sound.setBuffer(this->_data->buffer);
+				this->_data->sound.play();
+				this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+			}
 
 			//for exiting 
 			if (this->_data->input.IsSpriteClicked(this->_quit, sf::Mouse::Left, this->_data->window))
 			{
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
-				//show the game over state!
-				//this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 				_data->window.close();
 			}
-
-
+		
 			_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));
 
 		}
@@ -81,11 +86,7 @@ namespace Quizma
 
 	void GameOverState::Update(float dt)
 	{
-		//if (this->_clock.getElapsedTime().asSeconds() > SPLASH_STATE_SHOW_TIME)
-		//{
-		//	// Close the application
-		//	this->_data->window.close();
-		//}
+		
 	}
 
 	void GameOverState::Draw(float dt)
@@ -95,6 +96,7 @@ namespace Quizma
 		this->_data->window.draw(this->_gameOver);
 		this->_data->window.draw(this->_playAgain);
 		this->_data->window.draw(this->_quit);
+		this->_data->window.draw(this->_returnToTitle);
 		this->_data->window.draw(this->_cursor);
 		this->_data->window.display();
 	}

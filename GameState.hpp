@@ -28,6 +28,9 @@ namespace Quizma
 		sf::Sprite _cursor;
 		sf::Clock _clock;
 		std::stringstream ss;
-		sf::Text numbers;
+		sf::Text _numbers;
+		sf::Sprite _sound_icon;
+		sf::Sprite _pause_icon;
+		sf::Sprite _quit_icon;
 	};
 }

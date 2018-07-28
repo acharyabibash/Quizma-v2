@@ -29,11 +29,10 @@ namespace Quizma
 		_maths_and_logic.setTexture(this->_data->assets.GetTexture("Maths and Logics"));
 		_sports.setTexture(this->_data->assets.GetTexture("Sports"));
 
-		_maths_and_logic.setPosition(100, 100);
-		_sports.setPosition(100, 300);
+		_maths_and_logic.setPosition(250, 150);
+		_sports.setPosition(250, 350);
 
 		_cursor.setScale(0.35, 0.35);
-
 	}
 
 	void Categories::HandleInput()
@@ -42,10 +41,10 @@ namespace Quizma
 
 		while (this->_data->window.pollEvent(event))
 		{
-			/*if (sf::Event::Closed == event.type)
+			if (sf::Event::Closed == event.type)
 			{
 				this->_data->window.close();
-			}*/
+			}
 
 			if (sf::Event::KeyPressed)
 			{
@@ -58,10 +57,8 @@ namespace Quizma
 			if (this->_data->input.IsSpriteClicked(this->_maths_and_logic, sf::Mouse::Left, this->_data->window))
 			{
 				// Switch to the maths and logic section
-				//this->_data->music.pause();
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
-
 				std::cout << "Category 1 is chosen" <<std::endl;
 				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
@@ -75,7 +72,6 @@ namespace Quizma
 				//Switch to the sports section
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
-
 				std::cout << "Category 2 is chosen" << std::endl;
 				this->_data->machine.AddState(StateRef(new GameState2(_data)), true);
 

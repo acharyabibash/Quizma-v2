@@ -29,5 +29,8 @@ namespace Quizma
 		sf::Clock _clock;
 		std::stringstream ss;
 		sf::Text numbers;
+		sf::Sprite _sound_icon;
+		sf::Sprite _pause_icon;
+		sf::Sprite _quit_icon;
 	};
 }

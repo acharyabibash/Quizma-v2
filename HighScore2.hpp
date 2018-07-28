@@ -1,16 +1,17 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
+#include <fstream>
 #include "State.hpp"
 #include "Games.hpp"
 
+
 namespace Quizma
 {
-	class GameOverState : public State
+	class HighScore2 : public State
 	{
 	public:
-		GameOverState(GameDataRef data);
+		HighScore2(GameDataRef data);
 
 		void Init();
 
@@ -21,12 +22,8 @@ namespace Quizma
 	private:
 		GameDataRef _data;
 
-		sf::Clock _clock;
 		sf::Sprite _background;
-		sf::Sprite _gameOver;
+		sf::Sprite _backButton;
 		sf::Sprite _cursor;
-		sf::Sprite _quit;
-		sf::Sprite _playAgain;
-		sf::Sprite _returnToTitle;
 	};
 }
