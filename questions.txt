@@ -59,6 +59,6 @@ English:He was cautioned...........driving fast.:against:by:at:for:against
 English:The tendancy of postponing things:procrastinate:prolong:anticipate:delay:procrastinate
 English:The meeting was..........till next friday.:put by:put off:put in:pull through:put off
 English:'To cast the first stone' means:deeply involved:first to find fault:praise all:start a fight
-English:The man..........from his chair suddenly.:raised:rose:rise:raise:rose
+English:The man.........from his chair suddenly.:raised:rose:rise:raise:rose
 English:She did make-up and it........her face:shone:shined:shine:none:shone
 English:The collection of flags is:orology:bunting:numismatics:philatelist:bunting
