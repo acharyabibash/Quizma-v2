@@ -140,7 +140,8 @@ namespace Quizma
 							_optionsBox[i].setColor(sf::Color::Cyan);
 
 							question_no++;
-							std::cout << "Score: " << question_no * 10 << std::endl;
+							this->_data->score = question_no * 10;
+							std::cout << "Score: " << this->_data->score << std::endl;
 							//go to next question
 							this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 						}
@@ -151,7 +152,7 @@ namespace Quizma
 							std::cout << "Correct subscript is: " << getCorrectAnswer() << std::endl;
 							_optionsBox[i].setColor(sf::Color::Red);
 							_optionsBox[getCorrectAnswer()].setColor(sf::Color::Cyan);
-							std::cout << "Score: " << question_no * 10 << std::endl;
+							std::cout << "Score: " << this->_data->score << std::endl;
 							question_no = 0;
 						}
 					}
@@ -190,6 +191,12 @@ namespace Quizma
 
 	void GameState::Update(float dt)
 	{
+		static int i = 0;
+		i++;
+		if (this->_clock.getElapsedTime().asSeconds() == 1)
+		{
+			std::cout << "FUCK U BITCH" << std::endl;
+		}
 		if (this->_clock.getElapsedTime().asSeconds() > 30)
 		{
 			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);

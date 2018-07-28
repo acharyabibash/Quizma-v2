@@ -4,7 +4,6 @@
 #include "DEFINITIONS.hpp"
 #include "Categories.hpp"
 #include "GameState.hpp"
-#include "GameState2.hpp"
 #include <iostream>
 
 namespace Quizma
@@ -65,6 +64,7 @@ namespace Quizma
 				this->_data->sound.play();
 
 				std::cout << "Category 1 is chosen" << std::endl;
+				this->_data->category = 0;
 				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution
@@ -78,6 +78,7 @@ namespace Quizma
 				this->_data->sound.play();
 
 				std::cout << "Category 2 is chosen" << std::endl;
+				this->_data->category = 1;
 				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution
@@ -91,6 +92,7 @@ namespace Quizma
 				this->_data->sound.play();
 
 				std::cout << "Category 2 is chosen" << std::endl;
+				this->_data->category = 2;
 				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution

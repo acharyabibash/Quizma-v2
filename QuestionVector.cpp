@@ -28,7 +28,7 @@ namespace Quizma
 			else if (question_answer_vector.at(i).category == "Math")
 			{
 				math_question_vector.push_back(question_answer_vector.at(i));
-			} 
+			}
 			else if (this->question_answer_vector.at(i).category == "English")
 			{
 				english_question_vector.push_back(question_answer_vector.at(i));
