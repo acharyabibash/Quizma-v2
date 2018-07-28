@@ -21,8 +21,9 @@ namespace Quizma
 	private:
 		GameDataRef _data;
 		sf::Sprite _background;
-		sf::Sprite _maths_and_logic;
+		sf::Sprite _science_and_logic;
 		sf::Sprite _sports;
+		sf::Sprite _english;
 		sf::Sprite _cursor;
 	};
 }

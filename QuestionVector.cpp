@@ -28,7 +28,12 @@ namespace Quizma
 			else if (question_answer_vector.at(i).category == "Math")
 			{
 				math_question_vector.push_back(question_answer_vector.at(i));
+			} 
+			else if (this->question_answer_vector.at(i).category == "English")
+			{
+				english_question_vector.push_back(question_answer_vector.at(i));
 			}
+
 		}
 	}
 
@@ -42,5 +47,10 @@ namespace Quizma
 	{
 		std::shuffle(math_question_vector.begin(), math_question_vector.end(), rng);
 		return math_question_vector;
+	}
+	std::vector<QuestionManager> QuestionVector::passEnglishQuestions()
+	{
+		std::shuffle(english_question_vector.begin(), english_question_vector.end(), rng);
+		return english_question_vector;
 	}
 }

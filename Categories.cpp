@@ -78,7 +78,7 @@ namespace Quizma
 				this->_data->sound.play();
 
 				std::cout << "Category 2 is chosen" << std::endl;
-				this->_data->machine.AddState(StateRef(new GameState2(_data)), true);
+				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution
 				this->_data->question_vector = this->_data->qa_vector.passSportsQuestions();
@@ -90,11 +90,11 @@ namespace Quizma
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();
 
-				/*std::cout << "Category 3 is chosen" << std::endl;
-				this->_data->machine.AddState(StateRef(new GameState2(_data)), true);
+				std::cout << "Category 2 is chosen" << std::endl;
+				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 
 				// For random questions per execution
-				this->_data->question_vector = this->_data->qa_vector.passSportsQuestions();*/
+				this->_data->question_vector = this->_data->qa_vector.passEnglishQuestions();
 			}
 
 			_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));
