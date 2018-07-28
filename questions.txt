@@ -23,6 +23,11 @@ Math:There are many junction diode, among them P-N junction diode is equivalent 
 Math:A proton and an alpha-particle of equal momenta enter a uniform magnetic field normally. The radii of their orbits will have the ratio:1/1:2/1:1/2:4/1:2/1
 Math:Roots are the values obtained by sloving a equation, the equation whose roots are twice the roots of the equation 7x^2-5x+3=0 is:2x^2-5x+4=0:3x^2+4x-7=0:7x^2-8x+12=0:12x^2-7x+5=0:7x^2-8x+12=0
 Math:If the flow of water is such that water in a tank is doubled in every minute and if the tank is filled in an hour.At what time is it half filled?:32.5:30:59:52:59
+Math:The impedence of series RLC circuit at resonance is:Maximum:Minimum:Zero:None:Maximum
+Math:The direction of magnetic field within a magnet is:South to north:Back to front:Front to back:North to south:South to north
+Math:The area of triangle formed by the line 3x+4y=12 with coordinate axes is:2:4:6:12:6
+Math:Shortest distance of the point(4,3,5) from z-axis is:5 units:Sqrt(34) units:Sqrt(41) units:Sqrt(50) units:5 units
+Math:Size of the nucleus is in the order of:10^-6 m:10^-10 m:10^-12 m:10^-15 m:10^-15 m
 Sports:Where did Usain Bolt finish in his final race of his career?:First:Second:Third:He didn't finish:He didn't finish
 Sports:Which tennis player made it to three singles grand slam finals this year?:Venus Williams:Roger Federer:Rafa Nadal:Garbiñe Muguruza:Rafa Nadal
 Sports:Who scored the first goal of the fifa world cup 2018?:Denis Cheryshev:Aleksandr Golovin:Yuri Gazinsky:Christiano Ronaldo:Yuri Gazinsky
