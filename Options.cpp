@@ -57,7 +57,7 @@ namespace Quizma
 			{
 				this->_data->window.close();
 			}
-
+			
 			if (sf::Event::KeyPressed)
 			{
 				if (event.key.code == sf::Keyboard::Escape)
@@ -95,7 +95,7 @@ namespace Quizma
 				this->_data->music3.play();
 			}
 			
-			else if (this->_data->input.IsSpriteClicked(this->_option_2, sf::Mouse::Left, this->_data->window))
+			if (this->_data->input.IsSpriteClicked(this->_option_2, sf::Mouse::Left, this->_data->window))
 			{
 				//Music Stops!!
 			
@@ -107,7 +107,7 @@ namespace Quizma
 				this->_data->sound.play();
 			}
 
-			else if (this->_data->input.IsSpriteClicked(this->_option_back, sf::Mouse::Left, this->_data->window))
+			if (this->_data->input.IsSpriteClicked(this->_option_back, sf::Mouse::Left, this->_data->window))
 			{
 				this->_data->sound.setBuffer(this->_data->buffer);
 				this->_data->sound.play();

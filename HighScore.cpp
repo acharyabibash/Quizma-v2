@@ -41,6 +41,14 @@ namespace Quizma
 			{
 				this->_data->window.close();
 			}
+
+			if (sf::Event::KeyPressed)
+			{
+				if (event.key.code == sf::Keyboard::Escape)
+				{
+					this->_data->machine.AddState(StateRef(new MainMenuState(_data)), true);
+				}
+			}
 			
 			if (this->_data->input.IsSpriteClicked(this->_backButton, sf::Mouse::Left, this->_data->window))
 			{

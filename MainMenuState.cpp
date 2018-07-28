@@ -60,14 +60,6 @@ namespace Quizma
 				this->_data->window.close();
 			}			 					
 
-			if (sf::Event::KeyPressed)
-			{
-				if (event.key.code == sf::Keyboard::Escape)
-				{
-					this->_data->window.close();
-				}
-			}
-
 			if (this->_data->input.IsSpriteClicked(this->_playButton, sf::Mouse::Left, this->_data->window))
 			{
 				// Switch to the game screen
