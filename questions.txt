@@ -27,11 +27,27 @@ Math:The direction of magnetic field within a magnet is:South to north:Back to f
 Math:The area of triangle formed by the line 3x+4y=12 with coordinate axes is:2:4:6:12:6
 Math:Shortest distance of the point(4,3,5) from z-axis is:5 units:Sqrt(34) units:Sqrt(41) units:Sqrt(50) units:5 units
 Math:Size of the nucleus is in the order of:10^-6 m:10^-10 m:10^-12 m:10^-15 m:10^-15 m
+Math:Rutherford's aplha-experiment determines the size of:atom:electron:nucleus:all:nucleus
 Sports:Where did Usain Bolt finish in his final race of his career?:First:Second:Third:He didn't finish:He didn't finish
 Sports:Which tennis player made it to three singles grand slam finals this year?:Venus Williams:Roger Federer:Rafa Nadal:Garbiñe Muguruza:Rafa Nadal
 Sports:Who scored the first goal of the fifa world cup 2018?:Denis Cheryshev:Aleksandr Golovin:Yuri Gazinsky:Christiano Ronaldo:Yuri Gazinsky
 Sports:Who was the first player to be sent off in the World Cup 2018?:Carlos Sanchez:Igor Smolnikov:Cheikhou Kouyate:Neymar:Carlos Sanchez
 Sports:Who assisted Lionel Messi for his only goal of the group stages?:Angel Di Maria:Ever Banega:Enzo Perez:None of the above:Ever Banega
+Sports:Which athlete held three different world records in the same event on the same day in july?:Mo Farah:Usain Bolt:Adam Peaty:Jonnie Peacock:Adam Peaty
+Sports:Where can you find arnis being widely practised?:Japan:Srilanka:Philippines:China:Philippines
+Sports:In what sport would one find an Albion round?:Wrestling:Javelin throw:Archery:Tennis:Archery
+Sports:In polo, what is a period of play called?:Lap:Chukka:Round:Half:Chukka
+Sports:Who was the first player to win five straight Wimbledon tennis titles?:Venus Williams:Roger Federer:Rafa Nadal:Bjorn Borg:Bjorn Borg
+Sports:How many holes does a standard golf course have?:20:9:18:14:18
+Sports:When was the first world cup played?:1930:1932:1934:1936:1930
+Sports:Who is the youngest golfer ever to win the U.S. Junior Amateur title?:Tiger Woods:Tiger Woods
+Sports:How many holes are there in a bowling ball?:3:4:2:5:3
+Sports:In which country was golf invented?:England:Switzerland:Scotland:Netherland:Scotland
+Sports:Which country hosted the 2006 FIFA World Cup?:Brazil:Russia:South Africa:Germany:Germany
+Sports:What is the maximum number of clubs that can be used in golf tournament?:14:12:16:20:14
+Sports:What was the first sport to have a world championship?:Football:Cricket:Billiards:Chess:Billiards
+Sports:In what year was the first World Cup of cricket held?:1964:1972:1975:1978:1975
+Sports:In which city was the Asian Games first held?:Beijing:Delhi:Tokyo:Kathmandu:Delhi
 English:He could go for a long drive today if it.......sunny.:was:is:were:had been:were
 English:I was told......very quickly and quietly.:go:to go:going:to going:to go
 English:He postponed..........to lumbini.:going:to going:gone:to go:going 
