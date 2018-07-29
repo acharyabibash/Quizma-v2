@@ -20,7 +20,10 @@ namespace Quizma
 
 	private:
 		GameDataRef _data;
-
+		std::vector <std::string> result;
+		std::ifstream _name_file;
+		sf::Font _font;
+		sf::Text _text;
 		sf::Sprite _background;
 		sf::Sprite _backButton;
 		sf::Sprite _cursor;
