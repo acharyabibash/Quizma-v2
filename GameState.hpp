@@ -27,16 +27,11 @@ namespace Quizma
 		bool is_wrong_sprite_clicked = false;
 
 		sf::Sprite _cursor;
+		sf::Clock _clock;
+		std::stringstream ss;
+		sf::Text _numbers;
 		sf::Sprite _sound_icon;
 		sf::Sprite _pause_icon;
 		sf::Sprite _quit_icon;
-		sf::Clock _clock_prime;
-
-		//for timer countdown
-		sf::Clock _clock;
-		int _countdown = 30;
-		std::string _countdownString;
-		std::ostringstream _convert;
-		sf::Text _timerText;
 	};
 }

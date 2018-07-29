@@ -34,9 +34,7 @@ namespace Quizma
 
 	void GameState::Init()
 	{
-		_convert << _countdown;
-		_countdownString = _convert.str();
-
+		// set the character size
 		this->_data->text.setCharacterSize(30);
 		this->_data->text.setFillColor(sf::Color::Black);
 		this->_data->text.setPosition(250, 200);
@@ -91,7 +89,7 @@ namespace Quizma
 		_optionsBox[1].setPosition(1090, 450);
 		_optionsBox[2].setPosition(290, 650);
 		_optionsBox[3].setPosition(1090, 650);
-		_sound_icon.setPosition(0, 220);
+		_sound_icon.setPosition(0, 200);
 		_pause_icon.setPosition(0, 100);
 		_quit_icon.setPosition(0, 0);
 
@@ -116,11 +114,6 @@ namespace Quizma
 
 			break;
 		}
-
-		_timerText.setFont(this->_data->font);
-		_timerText.setString(_countdownString);
-		_timerText.setPosition(1800, 0);
-		_timerText.setCharacterSize(60);
 	}
 
 	void GameState::HandleInput()
@@ -140,8 +133,7 @@ namespace Quizma
 				{
 					if (this->_data->input.IsSpriteClicked(this->_optionsBox[i], sf::Mouse::Left, this->_data->window))
 					{
-						if (this->_data->question_vector.at(question_no).ans[i] == this->_data->question_vector.at(question_no).correct_ans)
-						{
+						if (this->_data->question_vector.at(question_no).ans[i] == this->_data->question_vector.at(question_no).correct_ans) {
 							std::cout << "Correct subscript is: " << getCorrectAnswer() << std::endl;
 							this->_data->sound.setBuffer(this->_data->buffer);
 							this->_data->sound.play();
@@ -153,7 +145,6 @@ namespace Quizma
 							//go to next question
 							this->_data->machine.AddState(StateRef(new GameState(_data)), true);
 						}
-
 						else
 						{
 							is_wrong_sprite_clicked = true;
@@ -190,7 +181,6 @@ namespace Quizma
 
 				_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));
 			}
-
 			else
 			{
 				this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
@@ -201,17 +191,7 @@ namespace Quizma
 
 	void GameState::Update(float dt)
 	{
-
-		int timer = _clock.getElapsedTime().asSeconds();
-
-
-		if (timer > 0) {
-			_countdown--;
-			_timerText.setString(std::to_string(_countdown));
-			_clock.restart();
-		}
-
-		if (this->_clock_prime.getElapsedTime().asSeconds() > 30)
+		if (this->_clock.getElapsedTime().asSeconds() > 30)
 		{
 			this->_data->machine.AddState(StateRef(new GameOverState(_data)), true);
 		}
@@ -220,7 +200,6 @@ namespace Quizma
 	void GameState::Draw(float dt)
 	{
 		this->_data->window.clear();
-
 		this->_data->window.draw(this->_background);
 		this->_data->window.draw(this->_questionBox);
 		this->_data->window.draw(this->_data->text);
@@ -233,7 +212,6 @@ namespace Quizma
 			this->_data->window.draw(this->_optionsBox[i]);
 			this->_data->window.draw(this->_data->texts[i]);
 		}
-		this->_data->window.draw(this->_timerText);
 		this->_data->window.draw(this->_cursor);
 
 		this->_data->window.display();

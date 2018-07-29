@@ -26,6 +26,9 @@ namespace Quizma
 
 		int score;
 		int category;
+		std::string categoryStr;
+		std::string highscoreCat;
+		std::string name;
 
 		sf::Music music;
 		sf::Music music1;

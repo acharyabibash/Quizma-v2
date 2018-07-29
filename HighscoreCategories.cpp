@@ -2,19 +2,20 @@
 
 #include <sstream>
 #include "DEFINITIONS.hpp"
-#include "Categories.hpp"
-#include "GameState.hpp"
+#include "HighscoreCategories.hpp"
+#include "HighScore.hpp"
 #include <iostream>
+
 
 namespace Quizma
 {
-	Categories::Categories(GameDataRef data) : _data(data)
+	HighscoreCategories::HighscoreCategories(GameDataRef data) : _data(data)
 	{
 
 	}
 
 
-	void Categories::Init()
+	void HighscoreCategories::Init()
 	{
 
 		this->_data->window.setMouseCursorVisible(false);
@@ -37,7 +38,7 @@ namespace Quizma
 		_cursor.setScale(0.35, 0.35);
 	}
 
-	void Categories::HandleInput()
+	void HighscoreCategories::HandleInput()
 	{
 		sf::Event event;
 
@@ -64,11 +65,9 @@ namespace Quizma
 				this->_data->sound.play();
 
 				std::cout << "Category 1 is chosen" << std::endl;
-				this->_data->category = 0;
-				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
+				this->_data->highscoreCat = "Category - 1";
+				this->_data->machine.AddState(StateRef(new HighScore(_data)), true);
 
-				// For random questions per execution
-				this->_data->question_vector = this->_data->qa_vector.passMathQuestions();
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_sports, sf::Mouse::Left, this->_data->window))
@@ -78,11 +77,9 @@ namespace Quizma
 				this->_data->sound.play();
 
 				std::cout << "Category 2 is chosen" << std::endl;
-				this->_data->category = 1;
-				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
+				this->_data->highscoreCat = "Category - 2";
+				this->_data->machine.AddState(StateRef(new HighScore(_data)), true);
 
-				// For random questions per execution
-				this->_data->question_vector = this->_data->qa_vector.passSportsQuestions();
 			}
 
 			if (this->_data->input.IsSpriteClicked(this->_english, sf::Mouse::Left, this->_data->window))
@@ -92,23 +89,22 @@ namespace Quizma
 				this->_data->sound.play();
 
 				std::cout << "Category 3 is chosen" << std::endl;
-				this->_data->category = 3;
-				this->_data->machine.AddState(StateRef(new GameState(_data)), true);
+				this->_data->highscoreCat = "Category - 3";
+				this->_data->machine.AddState(StateRef(new HighScore(_data)), true);
 
-				// For random questions per execution
-				this->_data->question_vector = this->_data->qa_vector.passEnglishQuestions();
+
 			}
 
 			_cursor.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(this->_data->window)));
 		}
 	}
 
-	void Categories::Update(float dt)
+	void HighscoreCategories::Update(float dt)
 	{
 
 	}
 
-	void Categories::Draw(float dt)
+	void HighscoreCategories::Draw(float dt)
 	{
 		this->_data->window.clear(sf::Color::Black);
 		this->_data->window.draw(this->_background);

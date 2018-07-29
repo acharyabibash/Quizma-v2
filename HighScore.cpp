@@ -9,8 +9,7 @@
 
 namespace Quizma
 {
-	int j = 0;
-	sf::Vector2i positionText(635, 450);
+	
 	HighScore::HighScore(GameDataRef data) : _data(data)
 	{
 
@@ -38,15 +37,17 @@ namespace Quizma
 		_cursor.setPosition((SCREEN_WIDTH / 2) - (_cursor.getGlobalBounds().width / 2), (SCREEN_HEIGHT / 2) - (_cursor.getGlobalBounds().height / 2));
 		_backButton.setPosition(1300, 950);
 
+		positionText.x = 650;
+		positionText.y = 450;
 		if (_name_file.is_open())
 		{
-			j = 0;
+			result_no = 0;
 			std::string line;
 			while (std::getline(_name_file, line)) {
-				
-				if ((line[line.length() - 1] - '0') == this->_data->category) {
+				std::cout << this->_data->highscoreCat[11] << line[18];
+				if ((line[18]) == this->_data->highscoreCat[11]) {
 					result.push_back(line);
-					j++;
+					result_no++;
 				}
 			}
 			_name_file.close();
@@ -98,10 +99,13 @@ namespace Quizma
 	void HighScore::Draw(float dt)
 	{
 		
+
 		this->_data->window.clear(sf::Color::Black);
 		this->_data->window.draw(this->_background);
+		this->_data->window.draw(this->_backButton);
+		positionText.y = 450;
 
-		for (int i = 0; i < j; i++) 
+		for (int i = 0; i < result_no; i++) 
 		{
 			_text.setPosition(positionText.x,positionText.y);
 			_text.setString(result[i]);
@@ -110,7 +114,7 @@ namespace Quizma
 		}
 
 		
-		this->_data->window.draw(this->_backButton);
+		
 		this->_data->window.draw(this->_cursor);
 
 		this->_data->window.display();

@@ -22,6 +22,9 @@ namespace Quizma
 		GameDataRef _data;
 		std::vector <std::string> result;
 		std::ifstream _name_file;
+		sf::Vector2i positionText;
+		int result_no;
+		std::string category;
 		sf::Font _font;
 		sf::Text _text;
 		sf::Sprite _background;

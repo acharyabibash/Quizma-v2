@@ -5,7 +5,6 @@
 #include "GameOverState.hpp"
 #include "MainMenuState.hpp"
 #include "GameState.hpp"
-#include "GameState2.hpp"
 #include "Games.hpp"
 #include "Categories.hpp"
 
@@ -69,11 +68,20 @@ namespace Quizma
 			}
 			if ((this->_data->input.IsSpriteClicked(this->_returnToTitle, sf::Mouse::Left, this->_data->window)) || (this->_data->input.IsSpriteClicked(this->_quit, sf::Mouse::Left, this->_data->window)) )
 			{
-				_name_file << this->_data->score << ":";
+				if (this->_data->score < 10)
+					_name_file << this->_data->score << "      ";
+				else if (this->_data->score < 100)
+					_name_file << this->_data->score << "     ";
+				else if (this->_data->score < 1000)
+					_name_file << this->_data->score << "    ";
 				if (this->_data->category == 0)
-					_name_file << "Math" << std::endl;
-				if (this->_data->category == 1)
-					_name_file << "Sport" << std::endl;
+					_name_file << "Category - 1" << "       ";
+				else if (this->_data->category == 1)
+					_name_file << "Category - 2" << "       ";
+				else if (this->_data->category == 3)
+					_name_file << "Category - 3" << "       ";
+				_name_file << this->_data->name << " " << std::endl;
+
 
 				//for returning to the main screen title
 				if (this->_data->input.IsSpriteClicked(this->_returnToTitle, sf::Mouse::Left, this->_data->window))
