@@ -24,8 +24,6 @@ namespace Quizma
 		_background.setTexture(this->_data->assets.GetTexture("Player Background"));
 		std::cout << "The state has been loaded.\n";
 
-		_name_file.open(PLAYER_RECORD_FILEPATH,std::ios::app);
-
 		_name_font.loadFromFile(PLAYER_FONT_FILEPATH);
 		_name_text.setFont(_name_font);
 		_name_text.setCharacterSize(50);
@@ -50,10 +48,9 @@ namespace Quizma
 			{
 				if (event.key.code == sf::Keyboard::Return)
 				{
-					_name_file << _name << ":";
+					this->_data->name = _name;
 					this->_data->sound.setBuffer(this->_data->buffer);
 					this->_data->sound.play();
-					this->_name_file.close();
 					std::cout << "Load new state" << std::endl;
 					this->_data->machine.AddState(StateRef(new Categories(_data)), true);
 				}
