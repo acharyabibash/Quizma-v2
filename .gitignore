@@ -1,0 +1,6 @@
+bin/
+obj/
+*.dll
+Quizma v2.cbp
+Quizma v2.depend
+Quizma v2.layout
